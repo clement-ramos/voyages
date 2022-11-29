@@ -11,10 +11,17 @@
 
 /* Vous pouvez définir ici la couleur de votre nav-bar la troisième couleur est celle du hover*/
 :root {
-  --first-color-nav: green;
-  --second-color-nav: #1b1b1b;
-  --hover-color-nav: #1e1e1e;
+  --first-color-nav: #BBA791;
+  --second-color-nav: #2F71A4;
+  --hover-color-nav: #669a6e;
   --text-color-nav: #e6e6e6;
+}
+html{
+  background-color: black;
+}
+canvas{
+  cursor: pointer;
+  /* filter: blur(25px); */
 }
 
 .nav-btn {
@@ -45,4 +52,75 @@ nav ul li a:hover {
 }
 nav ul ul li a {
   color: var(--text-color-nav);
+}
+
+
+/* pop up */
+
+.pop-up{
+  background-color: rgba(255, 255, 255, 0.531);
+  padding: 10px;
+  border-radius: 10px;
+  width: 30%;
+  z-index: 10;
+  left: 35%;
+  top: 5%;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-self: center;
+}
+.pop-up p{
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.btn-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.pop-up img{
+  margin-left: 10%;
+  width: 80%;
+  border-radius: 20px;
+}
+.button {
+  border-radius: 20px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100px;
+  color: white;
+  background:transparent;
+  padding:12px 24px;
+  border:solid 2px white;
+  display:inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: all .4s;
+}
+.button:before {
+  content:'';
+  position:absolute;
+  z-index: -1;
+  background:white;
+  left:-20px;
+  top:-20px;
+  width:0%;
+  height:calc(100% + 40px);
+  transition: all .4s;
+  transform: skew(24deg);
+}
+
+.button:hover:before {
+  width:calc(100% + 40px);
+}
+.button:hover {
+  cursor:pointer;
+  color:black;
 }

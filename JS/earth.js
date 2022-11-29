@@ -11,8 +11,8 @@ let zoomY;
 function main()
 {
     addEventListener('mousedown', () => {
-            hold = true
-            return hold
+        hold = true
+        return hold
     })
     addEventListener('mouseup', () => {
         hold = false
@@ -43,13 +43,15 @@ function main()
 
     // earthgeometry
 
-    const earthgeometry = new THREE.SphereGeometry(0.60,64,64);
+    const earthgeometry = new THREE.SphereGeometry(0.5,256,256);
 
     const eatrhmaterial = new THREE.MeshPhongMaterial({
         roughness : 1,
         metalness:0,
-        map: THREE.ImageUtils.loadTexture('texture/2_no_clouds_16k.jpeg'),
-        bumpScale: 0.1,
+        map: THREE.ImageUtils.loadTexture('texture/snapbuilder.png'),
+        specularMap: THREE.ImageUtils.loadTexture('texture/map/map_spec.png'),
+        displacementMap: THREE.ImageUtils.loadTexture('texture/map/map_dis.png'),
+        displacementScale: 0.15,
     });
 
     const earthmesh = new THREE.Mesh(earthgeometry,eatrhmaterial);
@@ -58,7 +60,7 @@ function main()
 
     // ambientlight
 
-    const ambientlight = new THREE.AmbientLight(0xffffff, 0.2);
+    const ambientlight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientlight);
 
     // point light
@@ -71,15 +73,27 @@ function main()
     scene.add(pointerlight);
 
     // cloud
-    const cloudgeometry =  new THREE.SphereGeometry(0.61,32,32);
+    const cloudgeometry =  new THREE.SphereGeometry(0.60,32,32);
 
     const cloudmaterial = new THREE.MeshPhongMaterial({
         map: THREE.ImageUtils.loadTexture('texture/earthCloud.png'),
-        transparent: true
+        transparent: true,
     });
+    // star
+
+        const stargeometry =  new THREE.SphereGeometry(80,64,64);
+
+        const starmaterial = new THREE.MeshBasicMaterial({
+
+        map: THREE.ImageUtils.loadTexture('texture/galaxy.png'),
+        side: THREE.BackSide
+    });
+    
+    const starmesh = new THREE.Mesh(stargeometry,starmaterial);
+    
+    scene.add(starmesh);
 
     const cloudmesh = new THREE.Mesh(cloudgeometry,cloudmaterial);
-
     scene.add(cloudmesh);
 
     const mouse = {
@@ -88,6 +102,7 @@ function main()
     }
     
     const animate = () =>{
+        starmesh.rotation.z += 0.0005;
         requestAnimationFrame(animate);
         if(zoom == false) {
             if (hold == true) {
@@ -107,36 +122,41 @@ function main()
                 }
             }
             else{
+                if(nav == true){
+                    if( camera.position.x <= 0.5){
+                        camera.position.x += 0.01;
+                    }
+                }
+                if(nav == false){
+                    if( camera.position.x >= 0){
+                        camera.position.x -= 0.01;
+                    }
+                }
+                if( camera.position.z <= 2){
+                    camera.position.z += 0.02;
+                }
+                if( earthmesh.rotation.x >= 0){
+                    earthmesh.rotation.x -= 0.01;
+                }
                 if(lastmousepos < 0){
                     cloudmaterial.opacity = 1;
-                    earthmesh.rotation.x = 0;
                     earthmesh.rotation.y += 0.002;
                     cloudmesh.rotation.y -= 0.0015;
                     if(earthmesh.rotation.y > Math.PI*2){
                         earthmesh.rotation.y = 0;
                     }
+                    if( camera.position.z <= 2){
+                        camera.position.z += 0.02;
+                    }
                 }
                 else{
-                    console.log(nav);
                     cloudmaterial.opacity = 1;
-                    earthmesh.rotation.x = 0;
                     earthmesh.rotation.y -= 0.002;
                     cloudmesh.rotation.y += 0.0015;
                     if(earthmesh.rotation.y < 0){
                         earthmesh.rotation.y = Math.PI*2;
                     }
-                    if(nav == true){
-                        if( camera.position.x <= 0.5){
-                            camera.position.x += 0.01;
-                        }
-                    }
-                    else{
-                        if( camera.position.x >= 0){
-                            camera.position.x -= 0.01;
-                        }
-                    }
                 }
-
             }
         }
         else{
@@ -145,8 +165,9 @@ function main()
             if( earthmesh.rotation.y  >= zoomX-0.1 && earthmesh.rotation.y <= zoomX+0.1){
                 if( earthmesh.rotation.x  >= zoomY-0.1 && earthmesh.rotation.x <= zoomY+0.1){
                     if( camera.position.z <= 0.8){
-                        if( cloudmaterial.opacity <= 0.5){
+                        if( cloudmaterial.opacity <= 0){
                             cloudmesh.rotation.y += 0.0001;
+                            console.log(earthmesh.rotation.x );
                         }
                         else{
                             cloudmaterial.opacity -= 0.03;
@@ -177,20 +198,16 @@ function main()
         renderer.render(scene,camera);
     }
     animate();
-
 }
 function zoom_in(cord_x,cord_y) 
 {
    zoom = true;
    zoomX = cord_x;
    zoomY = cord_y;
-   console.log(zoomCountry)
 }
 function zoom_out() 
 {
    zoom = false;
-   
-   camera.position.z = 2;
 }
 function nav_out() 
 {
