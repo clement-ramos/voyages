@@ -4,47 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="js/three.js"></script>
-    <script defer src="app.js"></script> 
+    <link rel="stylesheet" href="CSS/voyages-home.css">
+    <link rel="stylesheet" href="CSS/voyages.css">
+    <script src="JS/three.js"></script>
+    <script defer src="JS/earth.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/289fbec248.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
     <canvas id="c"></canvas>
-    <a href="#" class="nav-btn">
-        <span class="fas fa-align-justify fa-2xl" onclick="nav_out()"></span>
-      </a>
-      <nav class="sidebar">
-        <p>Navigation</p>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#" class="country-btn">Pays
-            <span class="fas fa-angle-down"></span>
-          </a>
-            <ul class="country-show">
-              <li><a onclick="zoom_in(2.4,0.73)" class="hide-btn">Korée</a></li>
-              <li><a onclick="zoom_in(0,1)" class="hide-btn">Canada</a></li>
-              <li><a onclick="zoom_in(5.9,.15)" class="hide-btn">Colombie</a></li>
-              <li><a onclick="zoom_in(4.2,1.2)" class="hide-btn">Finlande</a></li>
-              <li><a onclick="zoom_in(2.2,0.73)" class="hide-btn">Japon</a></li>
-            </ul>
-          </li>
     
-          <li><a href="#"class="name-btn">Prénoms
-            <span class="fas fa-angle-down"></span>
+    <a href="#" class="nav-btn">
+      <span class="fas fa-align-justify fa-2xl" onclick="nav_out()"></span>
+    </a>
+
+    <nav class="sidebar">
+      <p>Navigation</p>
+      <ul>
+
+        <li><a href="#">Home</a></li>
+        
+        <li>
+          <a href="#" class="country-btn">Pays
+          <span class="fas fa-angle-down"></span>
           </a>
-            <ul class="name-show">
-              <li><a href="#">Clément Marin</a></li>
-              <li><a href="#">Yoann Fermaud</a></li>
-              <li><a href="#">Elie Aigon</a></li>
-              <li><a href="#">Aurore Thomas</a></li>
-              <li><a href="#">Clément Ramos</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+          <ul class="country-show">
+            <li><a onclick="zoom_in(2.4,0.73)" class="hide-btn">Korée</a></li>
+            <li><a onclick="zoom_in(0,1)" class="hide-btn">Canada</a></li>
+            <li><a onclick="zoom_in(5.9,.15)" class="hide-btn">Colombie</a></li>
+            <li><a onclick="zoom_in(4.2,1.2)" class="hide-btn">Finlande</a></li>
+            <li><a onclick="zoom_in(2.2,0.73)" class="hide-btn">Japon</a></li>
+          </ul>
+        </li>
+    
+        <li>
+          <a href="#"class="name-btn">Prénoms
+          <span class="fas fa-angle-down"></span>
+          </a>
+          <ul class="name-show">
+            <li><a href="#">Clément Marin</a></li>
+            <li><a href="#">Yoann Fermaud</a></li>
+            <li><a href="#">Elie Aigon</a></li>
+            <li><a href="#">Aurore Thomas</a></li>
+            <li><a href="#">Clément Ramos</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+    </nav>
+
     <button onclick="zoom_out()">no zoom</button>
 
     <script>

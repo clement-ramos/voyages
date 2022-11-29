@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', Georgia, Times New Roman, Times, serif;
+  font-size: 1.2em;
+  color: black;
+}
+
+/* ---------------------------------------- */
+/*                    FONT                  */
+/* ---------------------------------------- */
+
+@font-face {
+  font-family: 'Voyage';
+  src: url(/Fonts/Voyage.otf);
+  format: otf;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(/Fonts/Raleway-VariableFont_wght.ttf);
+  format: ttf;
+}
+
+/* ---------------------------------------- */
+/*                    TITLES                */
+/* ---------------------------------------- */
+
+/* Les titres sont par défaut en majuscules, la 
+    police n'inclut pas les lettres minuscules */
+
+h1 {
+  font-family: 'Voyage', Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+  font-size: 5em;
+  font-weight: lighter;
+  line-height: 100px;
+  margin: 20px 20px 0px 20px;
+  color: black;
+}
+
+h2 {
+  font-family: 'Voyage', Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+  font-size: 3.75em;
+  font-weight: lighter;
+  line-height: 70px;
+  margin: 0 15px;
+  color: black;
+}
+
+h3 {
+  font-family: 'Voyage', Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+  font-size: 2.75em;
+  font-weight: lighter;
+  margin: 15px;
+  color: black;
+}
+
+h4 {
+  font-family: 'Voyage', Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+  font-size: 2em;
+  font-weight: lighter;
+  margin: 10px;
+  color: black;
+}
+
+h5 {
+  font-family: 'Voyage', Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+  font-size: 1.75em;
+  font-weight: lighter;
+  margin: 10px;
+  color: black;
+}
+
+h6 {
+  font-family: 'Voyage', Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+  font-size: 1.25em;
+  font-weight: lighter;
+  margin: 10px;
+  color: black;
+}
+
+.test {
+  margin: 30px;
+}
+
+/* ---------------------------------------- */
+/*                    OTHER                 */
+/* ---------------------------------------- */
+
+ul,
+ol,
+dl,
+blockquote,
+pre,
+td,
+th,
+label,
+textarea,
+caption,
+details,
+figure,
+figcaption {
+  font-size: 0.9em;
+  font-family: 'Raleway';
+  color: black;
+  margin: 2%;
+  list-style: square;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ---------------------------------------- */
+/*                    ICON                  */
+/* ---------------------------------------- */
+
+/* Pour les icons, mettre l'attribut class="icon" 
+    dans l'élément <img>  */
+
+.icon {
+  width: 100px;
+}
+
+/* ---------------------------------------- */
+/*           Barre de Navigation            */
+/* ---------------------------------------- */
+
+/*
+  LIGNES A METTRE DANS LE HEADER
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/289fbec248.js" crossorigin="anonymous"></script>
+*/
+
+.nav-btn {
+  text-decoration: none;
+}
+
+.sidebar {
+  z-index: 1;
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  transform: translateX(400%);
+  transition: 0.6s;
+}
+
+.sidebar.show {
+  transform: translateX(0%);
+}
+
+.sidebar p {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+
+nav ul li {
+  line-height: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-bottom: 3px solid transparent;
+  transition: .3s;
+}
+
+nav ul ul {
+  position: static;
+  display: none;
+}
+
+nav ul .country-show.show {
+  display: block;
+}
+
+nav ul .name-show.show {
+  display: block;
+}
+
+nav ul ul li {
+  line-height: 42px;
+  border-bottom: none;
+}
+
+nav ul ul li a {
+  font-size: 17px;
+  padding-left: 80px;
+}
+
+nav ul li a span {
+  position: absolute;
+  margin-top: 20px;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: transform 0.4s;
+}
+
+nav ul li a:hover span {
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.nav-btn {
+  position: fixed;
+  bottom: 50%;
+  right: 0;
+  width: 50px;
+  transition: 0.6s;
+}
+
+.nav-btn.show {
+  z-index: 100;
+  transform: translateX(-200px) rotate(-90deg);
+}
+
+/* ---------------------------------------- */
+/*                  Footer                  */
+/* ---------------------------------------- */

@@ -1,0 +1,48 @@
+/* ---------------------------------------- */
+/*      Barre de Navigation Couleurs        */
+/* ---------------------------------------- */
+
+/*
+  LIGNES A METTRE DANS LE HEADER
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/289fbec248.js" crossorigin="anonymous"></script>
+*/
+
+/* Vous pouvez définir ici la couleur de votre nav-bar la troisième couleur est celle du hover*/
+:root {
+  --first-color-nav: green;
+  --second-color-nav: #1b1b1b;
+  --hover-color-nav: #1e1e1e;
+  --text-color-nav: #e6e6e6;
+}
+
+.nav-btn {
+  color: var(--first-color-nav);
+}
+
+.sidebar {
+  background: var(--second-color-nav);
+}
+
+.sidebar p {
+  color: var(--text-color-nav);
+  background: var(--hover-color-nav);
+}
+
+nav ul {
+  background: var(--second-color-nav);
+}
+
+nav ul li a {
+  color: var(--text-color-nav);
+}
+
+nav ul li a:hover {
+  color: var(--first-color-nav);
+  background: var(--hover-color-nav);
+  border-bottom-color: var(--first-color-nav);
+}
+nav ul ul li a {
+  color: var(--text-color-nav);
+}
