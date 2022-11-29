@@ -1,0 +1,41 @@
+/* ---------------------------------------- */
+/*      Barre de Navigation Couleurs        */
+/* ---------------------------------------- */
+
+:root {
+    --first-color-nav: green;
+    --second-color-nav: #1b1b1b;
+    --hover-color-nav: #1e1e1e;
+    --text-color-nav: #e6e6e6;
+  }
+  
+  .nav-btn {
+    color: var(--first-color-nav);
+  }
+  
+  .sidebar {
+    background: var(--second-color-nav);
+  }
+  
+  .sidebar p {
+    color: var(--text-color-nav);
+    background: var(--hover-color-nav);
+  }
+  
+  nav ul {
+    background: var(--second-color-nav);
+  }
+  
+  nav ul li a {
+    color: var(--text-color-nav);
+  }
+  
+  nav ul li a:hover {
+    color: var(--first-color-nav);
+    background: var(--hover-color-nav);
+    border-bottom-color: var(--first-color-nav);
+  }
+  nav ul ul li a {
+    color: var(--text-color-nav);
+  }
+  
