@@ -1,0 +1,298 @@
+/* ---------------------------------------- */
+/*           Barre de Navigation            */
+/* ---------------------------------------- */
+
+/* Vous pouvez définir ici la couleur de votre nav-bar la troisième couleur est celle du hover*/
+:root {
+  --first-color-nav: cyan;
+  --second-color-nav: #1b1b1b;
+  --hover-color-nav: #1e1e1e;
+  --text-color-nav: #e6e6e6;
+}
+
+.nav-btn {
+  z-index: 2;
+  text-decoration: none;
+  color: var(--first-color-nav);
+}
+.sidebar {
+  z-index: 3;
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: var(--second-color-nav);
+  transform: translateX(400%);
+  transition: 0.6s;
+}
+.sidebar.show {
+  transform: translateX(0%);
+}
+.sidebar p {
+  color: var(--text-color-nav);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  background: var(--hover-color-nav);
+  letter-spacing: 1px;
+}
+nav ul {
+  background: var(--second-color-nav);
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+nav ul li {
+  line-height: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+nav ul li a {
+  cursor: pointer;
+  color: var(--text-color-nav);
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: var(--first-color-nav);
+  background: var(--hover-color-nav);
+  border-bottom-color: var(--first-color-nav);
+}
+nav ul ul {
+  position: static;
+  display: none;
+}
+
+nav ul .country-show.show {
+  display: block;
+}
+nav ul .name-show.show {
+  display: block;
+}
+
+nav ul ul li {
+  line-height: 42px;
+  border-bottom: none;
+}
+nav ul ul li a {
+  font-size: 17px;
+  color: var(--text-color-nav);
+  padding-left: 80px;
+}
+nav ul li a span {
+  position: absolute;
+  margin-top: 20px;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: transform 0.4s;
+}
+nav ul li a:hover span {
+  transform: translateY(-50%) rotate(-180deg);
+}
+.nav-btn {
+  position: fixed;
+  bottom: 50%;
+  right: 0;
+  width: 50px;
+  transition: 0.6s;
+}
+.nav-btn.show {
+  z-index: 100;
+  transform: translateX(-200px) rotate(-90deg);
+}
+
+/* ---------------------------------------- */
+/*           ????????????????????           */
+/* ---------------------------------------- */
+
+/* SECTION CLIP-PATH */
+
+.clip-path-title {
+  padding: 50px 40px 180px 40px;
+  display: flex;
+  background-color: #fff;
+}
+
+.clip-path-background {
+  padding: 400px 32px;
+  background-image: url("../img/header-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  margin-top: -400px;
+  background-color: white;
+
+  animation: show-banner 6s infinite ease-in-out;
+}
+
+@keyframes show-banner {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  40% {
+    -webkit-clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
+  }
+  60% {
+    -webkit-clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+/* SECTIOON PRACTICAL */
+
+.practical-information-trip {
+  margin: 20px 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  background-color: #fff;
+}
+
+.practical-information-trip article {
+  margin: 0 40px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.practical-information-trip article a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #000;
+}
+
+.practical-information-trip article a:hover i {
+  transform: scaleX(1.1);
+  translate: 10px;
+  transition: 0.5s;
+}
+
+.earth-plan img {
+  margin: 0 40px;
+  width: 250px;
+}
+
+.practical-logo img {
+  margin-right: 20px;
+}
+
+/* SECTION DSECRIPTION */
+
+.description-trip {
+  margin: 20px 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  background-color: #fff;
+}
+
+.description-trip article {
+  margin-right: 40px;
+  width: 600px;
+  text-align: justify;
+}
+
+.description-trip img {
+  width: 525px;
+  border-radius: 5px;
+}
+
+/* SECTION DSECRIPTION */
+
+.description-trip-reverse {
+  margin: 20px 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row-reverse wrap;
+  background-color: #fff;
+}
+
+.description-trip-reverse article {
+  margin-left: 40px;
+  width: 600px;
+  text-align: justify;
+}
+
+.description-trip-reverse img {
+  width: 525px;
+  border-radius: 5px;
+}
+
+/* SECTION BLOG */
+
+.blog-us {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  background-color: #fff;
+}
+
+.blog-us-tab {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.blog-us-tab article {
+  margin: 0 15px;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+}
+
+.blog-us-tab img {
+  margin-bottom: 10px;
+  width: 400px;
+}
+
+.blog-us-tab article:hover {
+  box-shadow: 0px 0px 50px rgba(100, 100, 100, 0.6);
+  transition: 0.5s;
+}
+
+/* SECTION TRIP */
+
+.about-trip {
+  margin: 20px 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: flex-start;
+  background-image: url(../img/palm-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-trip article {
+  margin: 40px 30px;
+  padding: 0 50px 30px 50px;
+  /* width: 725px; */
+  width: 575px;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: justify;
+}
