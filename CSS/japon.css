@@ -1,4 +1,12 @@
 /* ---------------------------------------- */
+/*           General Informations           */
+/* ---------------------------------------- */
+
+body{
+  background-color: aqua;
+}
+
+/* ---------------------------------------- */
 /*           Barre de Navigation            */
 /* ---------------------------------------- */
 
@@ -108,14 +116,12 @@ nav ul li a:hover span {
   z-index: 100;
   transform: translateX(-200px) rotate(-90deg);
 }
-
 /* ---------------------------------------- */
-/*           ????????????????????           */
+/*                Clip-Path                 */
 /* ---------------------------------------- */
-
-/* SECTION CLIP-PATH */
 
 .clip-path-title {
+  margin: 20px 0;
   padding: 50px 40px 180px 40px;
   display: flex;
   background-color: #fff;
@@ -123,10 +129,10 @@ nav ul li a:hover span {
 
 .clip-path-background {
   padding: 400px 32px;
-  background-image: url("../img/header-bg.jpg");
+  background-image: url("../Images/Japon/Japon1.jpeg");
   background-size: cover;
   background-position: center center;
-  margin-top: -400px;
+  margin-top: -430px;
   background-color: white;
 
   animation: show-banner 6s infinite ease-in-out;
@@ -151,7 +157,9 @@ nav ul li a:hover span {
   }
 }
 
-/* SECTIOON PRACTICAL */
+/* ---------------------------------------- */
+/*          Practical Informations          */
+/* ---------------------------------------- */
 
 .practical-information-trip {
   margin: 20px 0;
@@ -182,11 +190,6 @@ nav ul li a:hover span {
   transform: scaleX(1.1);
   translate: 10px;
   transition: 0.5s;
-}
-
-.earth-plan img {
-  margin: 0 40px;
-  width: 250px;
 }
 
 .practical-logo img {
@@ -260,8 +263,7 @@ nav ul li a:hover span {
 
 .blog-us-tab article {
   margin: 0 15px;
-  width: 400px;
-  height: 400px;
+  width: 600px;
   text-align: center;
 }
 
@@ -282,7 +284,7 @@ nav ul li a:hover span {
   padding: 40px 0;
   display: flex;
   justify-content: flex-start;
-  background-image: url(../img/palm-bg.jpg);
+  background-image: url(../Images/Japon/Japon2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
