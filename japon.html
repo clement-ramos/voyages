@@ -67,7 +67,7 @@
       </section>
       <!-- ######################################################## -->
 
-      <section class="practical-information-trip">
+      <section class="practical-information-trip" id="summary">
         <article>
           <h2>Sommaire</h2>
           <p>
@@ -76,23 +76,19 @@
             centuries. Find facts and useful information, learn about the
             climate and get tips on how to get here and around.
           </p>
-          <a href="#">
+          <a href="#introduction">
             <p>Introduction</p>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
-          <a href="#">
+          <a href="#unmissable">
             <p>Les incontournables</p>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
-          <a href="#">
-            <p>D'autres Destination</p>
+          <a href="#best-to-eat">
+            <p>Les repas Typiques</p>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
-          <a href="#">
-            <p>D'autres Destination</p>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <a href="#">
+          <a href="#blog">
             <p>D'autres Destination</p>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -101,7 +97,7 @@
 
       <!-- ######################################################## -->
 
-      <section class="about-trip">
+      <section class="about-trip" id="introduction">
         <article>
           <h1>L'esprit de ce voyage</h1>
           <p>
@@ -154,7 +150,7 @@
 
       <!-- ######################################################## -->
 
-      <section class="description-trip">
+      <section class="description-trip" id="unmissable">
         <article>
           <h1>Destinations & Conseils</h1>
           <p>
@@ -241,11 +237,11 @@
 
       <!-- ######################################################## -->
 
-      <section class="when-travel">
+      <section class="when-travel" id="best-to-eat">
         <h1>TEst oui oui</h1>
         <article class="first">
           <img src="Images/Japon/Japon1.jpeg" alt="" />
-          <h1>Titre</h1>
+          <h2>Titre</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
             facilis quo rem dicta? Soluta fuga consequatur, eaque iure unde
@@ -255,7 +251,7 @@
         </article>
         <article class="second">
           <img src="Images/Japon/Japon1.jpeg" alt="" />
-          <h1>Titre</h1>
+          <h2>Titre</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
             facilis quo rem dicta? Soluta fuga consequatur, eaque iure unde
@@ -266,7 +262,7 @@
 
         <article class="third">
           <img src="Images/Japon/Japon1.jpeg" alt="" />
-          <h1>Titre</h1>
+          <h2>Titre</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
             facilis quo rem dicta? Soluta fuga consequatur, eaque iure unde
@@ -278,7 +274,7 @@
 
       <!-- ######################################################## -->*
 
-      <section class="blog-us">
+      <section class="blog-us" id="blog">
         <h1>Découvrir nos autres voyages ...</h1>
         <div class="blog-us-tab">
           <article>
@@ -313,14 +309,20 @@
             </a>
           </article>
         </div>
+
+        <div class="scroll_up">
+          <a href="#">
+            <p>Retournez au Sommaire</p>
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
+
       </section>
 
       <!-- ######################################################## -->
     </main>
 
     <!-- ######################################################## -->
-
-    <footer></footer>
 
     <script>
       $(".country-btn").click(function () {
@@ -333,6 +335,7 @@
       $(".nav-btn").click(function () {
         $(".sidebar").toggleClass("show");
         $(".nav-btn").toggleClass("show");
+        
       });
 
       $(".hide-btn").click(function () {
