@@ -1,8 +1,12 @@
+/* body {
+    background-color: #252525;
+} */
+
 /* ---------------------------------------- */
 /*      Barre de Navigation Couleurs        */
 /* ---------------------------------------- */
 
-:root {
+/* :root {
     --first-color-nav: green;
     --second-color-nav: #1b1b1b;
     --hover-color-nav: #1e1e1e;
@@ -37,5 +41,279 @@
   }
   nav ul ul li a {
     color: var(--text-color-nav);
-  }
+  } */
   
+/* ---------------------------------------- */
+/*                   En-tête                */
+/* ---------------------------------------- */
+
+.clip-path-title {
+    padding: 0px 40px 180px 78%;
+    display: flex;
+    background-color: #fff;
+}
+
+.clip-path-background {
+    padding: 400px 32px 400px 32px;;
+    background-image: url("../Images/Finlande/background-entete.jpg");
+    background-size: cover;
+    background-position: center center;
+    margin-top: -1000px;
+    background-color: white;
+
+    animation: show-banner 6s infinite ease-in-out;
+}
+
+@keyframes show-banner{
+    0%{
+        -webkit-clip-path: polygon(0 0, 80% 0, 80% 100%, 80% 100%, 80% 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 80% 0, 80% 100%, 80% 100%, 80% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    40%{
+        -webkit-clip-path: polygon(0 0, 77% 0, 77% 100%, 83% 100%, 83% 0%, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 77% 0, 77% 100%, 83% 100%, 83% 0%, 100% 0, 100% 100%, 0% 100% );
+    }
+    60%{
+        -webkit-clip-path: polygon(0 0, 77% 0, 77% 100%, 83% 100%, 83% 0%, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 77% 0, 77% 100%, 83% 100%, 83% 0%, 100% 0, 100% 100%, 0% 100% );
+    }
+    100%{
+        -webkit-clip-path: polygon(0 0, 80% 0, 80% 100%, 80% 100%, 80% 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 80% 0, 80% 100%, 80% 100%, 80% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+/* ---------------------------------------- */
+/*  Première section : Description Finlande */
+/* ---------------------------------------- */
+
+.description-trip {
+    margin: 80px 0;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    background-color: #fff;
+}
+
+.description-trip article {
+    margin-right: 40px;
+    width: 600px;
+    text-align: justify;
+}
+
+.description-trip-photos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 525px;
+    border-radius: 5px;
+}
+
+.description-trip-photos-haut {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.description-trip-photos-haut img {
+    height: 350px;
+}
+
+/* ---------------------------------------- */
+/*      Deuxième section : Bon à savoir     */
+/* ---------------------------------------- */
+
+.bon-a-savoir {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bon-a-savoir-title {
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.bon-a-savoir-all {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.bon-a-savoir-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 150px;
+    height : 200px;
+    text-align: center;
+}
+
+
+/* ---------------------------------------- */
+/*  Troisième section : Endroits à visiter  */
+/* ---------------------------------------- */
+
+.endroits-a-visiter {
+    margin-top: 200px;;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.endroits-a-visiter-grid-photos {
+    width: 40%;
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    
+}
+
+.endroits-a-visiter-grid-photos img {
+    -webkit-filter: grayscale(100%);
+}
+
+.grid-vertical {
+    height: 250px;
+    border : 2px solid #fff;
+}
+
+.grid-horizontal {
+    width: 250px;
+    border : 2px solid #fff;
+}
+
+.grid-centre {
+    width:300px;
+    border : 2px solid #fff;
+}
+
+.div1 { 
+    grid-area: 2 / 3 / 4 / 4; 
+    margin: 0 0 0 0px;
+}
+.div2 { 
+    grid-area: 3 / 4 / 5 / 6; 
+    margin: -97px 0px 0px -2px;
+}
+.div3 { 
+    grid-area: 1 / 4 / 3 / 5; 
+    margin : 0px 0px 0px 0px;
+}
+.div4 { 
+    grid-area: 5 / 5 / 7 / 6; 
+    margin: -225px 0 0 0;
+}
+.div5 { 
+    grid-area: 2 / 6 / 4 / 7; 
+    margin: 60px 0px 0px -120px;
+}
+.div6 { 
+    grid-area: 4 / 2 / 5 / 4; 
+    margin: -105px 125px 0px 0px;
+}
+.div7 { 
+    grid-area: 5 / 3 / 6 / 5; 
+    margin: -213px 0 0 163px;
+    
+}
+.div8 { 
+    grid-area: 4 / 6 / 5 / 8;
+    margin: -55px 0 0 -98px; 
+}
+.div9 { 
+    grid-area: 1 / 5 / 3 / 6; 
+    margin : -20px 0px 0px -9px;
+}
+.div10 { 
+    grid-area: 6 / 4 / 8 / 5; 
+    margin: -270px 0 0 -50px;
+}
+
+.endroits-a-visiter-liste {
+    margin-top: -80px;
+    margin-right: 70px;
+    width: 22%;
+}
+
+.endroits-a-visiter-liste a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000;
+}
+
+.endroits-a-visiter-liste a:hover i {
+    transform: scaleX(1.1);
+    translate: 10px;
+    transition: .5s;
+}
+
+.endroits-a-visiter img:hover {
+    -webkit-filter:grayscale(0%);
+    transform: scale(1.5);
+    z-index: 99;
+    position: relative;
+    transition: 0.8s;
+}
+
+/* ---------------------------------------- */
+/*       Quatrième section : Rovaniemi      */
+/* ---------------------------------------- */
+
+.rovaniemi {
+    margin: -300px 0px 0px 0;
+    padding: 40px 0;
+    display: flex;
+    justify-content: flex-start;
+    background-image: url(/Images/Finlande/rovaniemi-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rovaniemi article {
+    margin: 40px 80px;
+    padding: 0 30px 30px 30px;
+    /* width: 725px; */
+    width: 575px;
+    /* background-color: #fff; */
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    text-align: justify;
+}
+
+/* ---------------------------------------- */
+/*       Cinquième section :  Helsinki      */
+/* ---------------------------------------- */
+
+.helsinki {
+    margin: 20px 0;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row-reverse wrap;
+    background-color: #fff;
+}
+
+.helsinki article {
+    margin-left: 40px;
+    width: 600px;
+    text-align: justify;
+}
+
+.helsinki img {
+    width: 525px;
+    border-radius: 5px;
+}
