@@ -14,7 +14,8 @@
     <title>Document</title>
   </head>
   <body>
-    <a href="#" class="nav-btn">
+
+    <a class="nav-btn">
       <span class="fas fa-align-justify fa-2xl" onclick="nav_out()"></span>
     </a>
 
@@ -26,8 +27,8 @@
         <li><a href="#">Home</a></li>
 
         <li>
-          <a href="#" class="country-btn"
-            >Pays
+          <a href="#" class="country-btn">
+            Pays
             <span class="fas fa-angle-down"></span>
           </a>
           <ul class="country-show">
@@ -57,11 +58,13 @@
 
     <!-- ######################################################## -->
     <main>
-      <section class="clip-path-title">
-        <h2>Le Japon,<br />Guide de voyage</h2>
+      <section class="clip-path">
+        
+          <h1>Le Japon, Guide de voyage</h1>
+        
+        <section class="clip-path-background-first"></section>
+        <section class="clip-path-background-second"></section>
       </section>
-      <section class="clip-path-background"></section>
-
       <!-- ######################################################## -->
 
       <section class="practical-information-trip">
@@ -209,10 +212,68 @@
 
       <!-- ######################################################## -->
 
+      <section class="description-trip">
+        <article>
+          <h1>Destinations & Conseils</h1>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+        </article>
+        <a href="#">
+          <img src="Images/Japon/Japon3.jpeg" alt="" />
+        </a>
+      </section>
+
+      <!-- ######################################################## -->
+
       <section class="when-travel">
-        <article></article>
-        <article></article>
-        <article></article>
+        <h1>TEst oui oui</h1>
+        <article class="first">
+          <img src="Images/Japon/Japon1.jpeg" alt="" />
+          <h1>Titre</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
+            facilis quo rem dicta? Soluta fuga consequatur, eaque iure unde
+            tenetur reiciendis officiis asperiores veritatis adipisci. Pariatur
+            non magni voluptatibus consectetur.
+          </p>
+        </article>
+        <article class="second">
+          <img src="Images/Japon/Japon1.jpeg" alt="" />
+          <h1>Titre</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
+            facilis quo rem dicta? Soluta fuga consequatur, eaque iure unde
+            tenetur reiciendis officiis asperiores veritatis adipisci. Pariatur
+            non magni voluptatibus consectetur.
+          </p>
+        </article>
+
+        <article class="third">
+          <img src="Images/Japon/Japon1.jpeg" alt="" />
+          <h1>Titre</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
+            facilis quo rem dicta? Soluta fuga consequatur, eaque iure unde
+            tenetur reiciendis officiis asperiores veritatis adipisci. Pariatur
+            non magni voluptatibus consectetur.
+          </p>
+        </article>
       </section>
 
       <!-- ######################################################## -->*
@@ -259,10 +320,8 @@
 
     <!-- ######################################################## -->
 
-    <footer>
+    <footer></footer>
 
-    </footer>
-    
     <script>
       $(".country-btn").click(function () {
         $("nav ul .country-show").toggleClass("show");

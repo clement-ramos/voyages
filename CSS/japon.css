@@ -17,7 +17,6 @@ body{
   --hover-color-nav: #1e1e1e;
   --text-color-nav: #e6e6e6;
 }
-
 .nav-btn {
   z-index: 2;
   text-decoration: none;
@@ -120,36 +119,80 @@ nav ul li a:hover span {
 /*                Clip-Path                 */
 /* ---------------------------------------- */
 
-.clip-path-title {
+.clip-path{
   margin: 20px 0;
-  padding: 50px 40px 180px 40px;
+  padding: 400px 0;
   display: flex;
   background-color: #fff;
 }
-
-.clip-path-background {
-  padding: 400px 32px;
+.clip-path h1{
+  margin: 0 auto;
+}
+.clip-path-background-first{
+  margin-top: -40px;
+  height: 800px;
   background-image: url("../Images/Japon/Japon1.jpeg");
   background-size: cover;
   background-position: center center;
-  margin-top: -430px;
+  position: absolute;
+  top: 100px;
+  width: 100%;
   background-color: white;
-
-  animation: show-banner 6s infinite ease-in-out;
+  animation: show-banner-first 9s infinite ease-in-out;
 }
 
-@keyframes show-banner {
+.clip-path-background-second{
+  margin-top: -40px;
+  height: 800px;
+  background-image: url("../Images/Japon/Japon1.jpeg");
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  background-color: white;
+  animation: show-banner-second 9s infinite ease-in-out;
+}
+
+@keyframes show-banner-first {
   0% {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
-  40% {
-    -webkit-clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
+  25% {
+    -webkit-clip-path: polygon(0 0, 40% 0, 10% 100%, 0 100%);
+clip-path: polygon(0 0, 40% 0, 10% 100%, 0 100%);
   }
-  60% {
-    -webkit-clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
+  50%{
+    -webkit-clip-path: polygon(0 0, 10% 0, 0 100%, 0 100%);
+    clip-path: polygon(0 0, 10% 0, 0 100%, 0 100%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0 0, 40% 0, 10% 100%, 0 100%);
+    clip-path: polygon(0 0, 40% 0, 10% 100%, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes show-banner-second {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  25% {
+    -webkit-clip-path: polygon(90% 0, 100% 0, 100% 100%, 60% 100%);
+    clip-path: polygon(90% 0, 100% 0, 100% 100%, 60% 100%);
+  }
+  50%{
+    -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 90% 100%);
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 90% 100%);
+  }
+  75% {
+    -webkit-clip-path: polygon(90% 0, 100% 0, 100% 100%, 60% 100%);
+    clip-path: polygon(90% 0, 100% 0, 100% 100%, 60% 100%);
   }
   100% {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -242,10 +285,54 @@ nav ul li a:hover span {
   border-radius: 5px;
 }
 
+/* WHEN TRAVEL */
+.when-travel{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 1700px;
+  background-image: url(../Images/Japon/Finlande.jpg);
+  
+}
+.when-travel h1{
+  align-self: center;
+}
+.when-travel  article h1{
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+.when-travel article{
+  margin: 0 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 500px;
+  height: 450px;
+  background-color: aliceblue;
+  transition: .6s;
+}
+.when-travel .first:hover,.when-travel .third:hover{
+  transform: translateX(100px);
+  width: 70%;
+}
+.when-travel .second:hover{
+  transform: translateX(-100px);
+  width: 70%;
+}
+.when-travel .second{
+  align-self: flex-end;
+}
+.when-travel img{
+  width: 600px;
+  height: 450px;
+}
 /* SECTION BLOG */
 
 .blog-us {
-  margin: 20px 0;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
