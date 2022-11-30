@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/Koree.css" />
+    <link rel="stylesheet" href="CSS/voyages.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/289fbec248.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+
+    <a class="nav-btn">
+      <span class="fas fa-align-justify fa-2xl" onclick="nav_out()"></span>
+    </a>
+
+    <!-- ######################################################## -->
+
+    <nav class="sidebar">
+      <p>Navigation</p>
+      <ul>
+        <li><a href="#">Home</a></li>
+
+        <li>
+          <a href="#" class="country-btn">
+            Pays
+            <span class="fas fa-angle-down"></span>
+          </a>
+          <ul class="country-show">
+            <li><a onclick="zoom_in(2.4,0.73)" class="hide-btn">Korée</a></li>
+            <li><a onclick="zoom_in(0,1)" class="hide-btn">Canada</a></li>
+            <li><a onclick="zoom_in(5.9,.15)" class="hide-btn">Colombie</a></li>
+            <li><a onclick="zoom_in(4.2,1.2)" class="hide-btn">Finlande</a></li>
+            <li><a onclick="zoom_in(2.2,0.73)" class="hide-btn">Japon</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="name-btn"
+            >Prénoms
+            <span class="fas fa-angle-down"></span>
+          </a>
+          <ul class="name-show">
+            <li><a href="#">Clément Marin</a></li>
+            <li><a href="#">Yoann Fermaud</a></li>
+            <li><a href="#">Elie Aigon</a></li>
+            <li><a href="#">Aurore Thomas</a></li>
+            <li><a href="#">Clément Ramos</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ######################################################## -->
+    <main>
+      <section class="clip-path">
+        
+          <h1>Le Japon, Guide de voyage</h1>
+        
+        <section class="clip-path-background-first"></section>
+        <section class="clip-path-background-second"></section>
+      </section>
+      <!-- ######################################################## -->
+
+      <section class="practical-information-trip" id="summary">
+        <article>
+          <h2>Sommaire</h2>
+          <p>
+            We can help you to plan your trip to Fjord Norway! The ever-changing
+            landscape has attracted guests from all over the world for
+            centuries. Find facts and useful information, learn about the
+            climate and get tips on how to get here and around.
+          </p>
+          <a href="#introduction">
+            <p>Introduction</p>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#unmissable">
+            <p>Les incontournables</p>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#best-to-eat">
+            <p>Les repas Typiques</p>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#blog">
+            <p>D'autres Destination</p>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+      </section>
+
+      <!-- ######################################################## -->
+
+      <section class="about-trip" id="introduction">
+        <article>
+          <h1>L'esprit de ce voyage</h1>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+        </article>
+      </section>
+
+      <!-- ######################################################## -->
+
+      <section class="to-do" id="unmissable">
+        <h1>Lieu à ne pas rater !</h1>
+        <section>
+            <article class="to-do-first">
+                <h2>Lieu 1</h2>
+  
+                <div class="to-do-content">
+                    <img src="Images/Japon/Japon1.jpg" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti voluptates perferendis eveniet voluptas commodi debitis consequatur aperiam alias voluptatibus, rerum nostrum officia libero obcaecati, maiores, officiis quibusdam! Unde, possimus vel.</p>
+                </div>
+            </article>
+            <article class="to-do-second">
+                <h2>Lieu 1</h2>
+                <div class="to-do-content">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti voluptates perferendis eveniet voluptas commodi debitis consequatur aperiam alias voluptatibus, rerum nostrum officia libero obcaecati, maiores, officiis quibusdam! Unde, possimus vel.</p>
+                    <img src="Images/Japon/Japon1.jpg" alt="">
+                  </div>
+            </article>
+            <article class="to-do-third">
+                <h2>Lieu 1</h2>
+                <div class="to-do-content">
+                    <img src="Images/Japon/Japon1.jpg" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti voluptates perferendis eveniet voluptas commodi debitis consequatur aperiam alias voluptatibus, rerum nostrum officia libero obcaecati, maiores, officiis quibusdam! Unde, possimus vel.</p>
+                </div>
+            </article>
+        </section>
+        
+      </section>
+
+      <!-- ######################################################## -->
+
+      <section class="when-travel" id="best-to-eat">
+        <h1>TEst oui oui</h1>
+        <article class="first">
+          <img src="Images/Japon/Japon1.jpg" alt="" />
+          <h2>Titre</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
+            facilis quo rem dicta? Soluta fuga consequatur, eaque iure unde
+            tenetur reiciendis officiis asperiores veritatis adipisci. Pariatur
+            non magni voluptatibus consectetur.
+          </p>
+        </article>
+        <article class="second">
+          <img src="Images/Japon/Japon1.jpg" alt="" />
+          <h2>Titre</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
+            facilis quo rem dicta? Soluta fuga consequatur, eaque iure unde
+            tenetur reiciendis officiis asperiores veritatis adipisci. Pariatur
+            non magni voluptatibus consectetur.
+          </p>
+        </article>
+
+        <article class="third">
+          <img src="Images/Japon/Japon1.jpg" alt="" />
+          <h2>Titre</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
+            facilis quo rem dicta? Soluta fuga consequatur, eaque iure unde
+            tenetur reiciendis officiis asperiores veritatis adipisci. Pariatur
+            non magni voluptatibus consectetur.
+          </p>
+        </article>
+      </section>
+
+      <!-- ######################################################## -->*
+
+      <section class="blog-us" id="blog">
+        <h1>Découvrir nos autres voyages ...</h1>
+        <div class="blog-us-tab">
+          <article>
+            <a href="#">
+              <img src="Images/Japon/Canada.jpg" alt="blog voyage de ..." />
+              <h4>Titre du blog Titre du blog Titre du blog Titre du blog</h4>
+              <p>18 décembre 2018 -NOM DU PAYS</p>
+            </a>
+          </article>
+          <article>
+            <a href="#">
+              <img src="Images/Japon/Colombie.jpg" alt="blog voyage de ..." />
+              <h4>Titre du blog</h4>
+              <p>18 décembre 2018 -NOM DU PAYS</p>
+            </a>
+          </article>
+        </div>
+        <div class="blog-us-tab">
+          <article>
+            <a href="#">
+              <img src="Images/Japon/Finlande.jpg" alt="blog voyage de ..." />
+              <h4>Titre du blog</h4>
+              <p>18 décembre 2018 -NOM DU PAYS</p>
+            </a>
+          </article>
+
+          <article>
+            <a href="#">
+              <img src="Images/Japon/Korée.jpg" alt="blog voyage de ..." />
+              <h4>Titre du blog Titre du blog Titre du blog Titre du blog</h4>
+              <p>18 décembre 2018 -NOM DU PAYS</p>
+            </a>
+          </article>
+        </div>
+
+        <div class="scroll_up">
+          <a href="#">
+            <p>Retournez au Sommaire</p>
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
+
+      </section>
+
+      <!-- ######################################################## -->
+    </main>
+
+    <!-- ######################################################## -->
+
+    <script>
+      $(".country-btn").click(function () {
+        $("nav ul .country-show").toggleClass("show");
+      });
+      $(".name-btn").click(function () {
+        $("nav ul .name-show").toggleClass("show");
+      });
+
+      $(".nav-btn").click(function () {
+        $(".sidebar").toggleClass("show");
+        $(".nav-btn").toggleClass("show");
+        
+      });
+
+      $(".hide-btn").click(function () {
+        $(".sidebar").removeClass("show");
+        $(".nav-btn").removeClass("show");
+      });
+    </script>
+  </body>
+</html>
