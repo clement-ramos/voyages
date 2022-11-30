@@ -7,9 +7,17 @@ let zoom = false;
 let nav = false;
 let zoomX;
 let zoomY;
+let country_name;
+let earth_scale = 0.5;
+let intro = false;
+let night_button = document.querySelector('input');
+let night = false;
+let day = false;
 
 function main()
 {
+    let canv = document.querySelector('canvas');
+    canv.classList.add("load");
     addEventListener('mousedown', () => {
         hold = true
         return hold
@@ -43,9 +51,9 @@ function main()
 
     // earthgeometry
 
-    const earthgeometry = new THREE.SphereGeometry(0.5,256,256);
+    const earthgeometry = new THREE.SphereGeometry(earth_scale,256,256);
 
-    const eatrhmaterial = new THREE.MeshPhongMaterial({
+    const earthmaterial = new THREE.MeshPhongMaterial({
         roughness : 1,
         metalness:0,
         map: THREE.ImageUtils.loadTexture('texture/snapbuilder.png'),
@@ -54,7 +62,7 @@ function main()
         displacementScale: 0.15,
     });
 
-    const earthmesh = new THREE.Mesh(earthgeometry,eatrhmaterial);
+    const earthmesh = new THREE.Mesh(earthgeometry,earthmaterial);
 
     scene.add(earthmesh);
 
@@ -73,15 +81,15 @@ function main()
     scene.add(pointerlight);
 
     // cloud
-    const cloudgeometry =  new THREE.SphereGeometry(0.60,32,32);
+    const cloudgeometry =  new THREE.SphereGeometry(earth_scale + 0.1 ,32,32);
 
     const cloudmaterial = new THREE.MeshPhongMaterial({
         map: THREE.ImageUtils.loadTexture('texture/earthCloud.png'),
         transparent: true,
     });
-    // star
+    // stars
 
-        const stargeometry =  new THREE.SphereGeometry(80,64,64);
+        const stargeometry =  new THREE.SphereGeometry(10,64,64);
 
         const starmaterial = new THREE.MeshBasicMaterial({
 
@@ -100,7 +108,7 @@ function main()
         x: undefined,
         y: undefined
     }
-    
+    camera.position.z = 10;
     const animate = () =>{
         starmesh.rotation.z += 0.0005;
         requestAnimationFrame(animate);
@@ -122,15 +130,78 @@ function main()
                 }
             }
             else{
+                if( camera.position.z > 2.1){
+                    camera.position.z -= 0.06;
+                }
+                else{
+                    if(intro == false)
+                    {
+                        momo();
+                        let nav = document.querySelector('.nav-btn');
+                        let night = document.querySelector('.label');
+                        nav.classList.remove("hide");
+                        night.classList.remove("hide");
+                        intro = true;
+                    }
+                }
+                if(night_button.checked == true && night == false){
+                    let body = document.querySelector("body");
+                    body.classList.add("hide")
+                    setTimeout(() => {
+                        earthmesh.material = new THREE.MeshPhongMaterial({
+                            roughness : 1,
+                            metalness:0,
+                            map: THREE.ImageUtils.loadTexture('texture/snapbuilder_night.png'),
+                            specularMap: THREE.ImageUtils.loadTexture('texture/map/map_spec.png'),
+                            displacementMap: THREE.ImageUtils.loadTexture('texture/map/map_dis.png'),
+                            displacementScale: 0.15,
+                        });
+                        cloudmaterial.opacity = 0.3;
+                        night = true;
+                        day = false;
+                     }, 200);
+                     setTimeout(() => {
+                    body.classList.remove("hide")
+                    }, 500);
+
+                }
+                if(night_button.checked == false && day == false){
+                    let body = document.querySelector("body");
+                    body.classList.add("hide")
+                    setTimeout(() => {
+                        earthmesh.material = new THREE.MeshPhongMaterial({
+                            roughness : 1,
+                            metalness:0,
+                            map: THREE.ImageUtils.loadTexture('texture/snapbuilder.png'),
+                            specularMap: THREE.ImageUtils.loadTexture('texture/map/map_spec.png'),
+                            displacementMap: THREE.ImageUtils.loadTexture('texture/map/map_dis.png'),
+                            displacementScale: 0.15,
+                        });
+                        cloudmaterial.opacity = 0.3;
+                        night = false;
+                        day = true;
+                     }, 200);
+                     setTimeout(() => {
+                    body.classList.remove("hide")
+                    }, 500);
+                }
                 if(nav == true){
                     if( camera.position.x <= 0.5){
                         camera.position.x += 0.01;
                     }
+                    let title = document.querySelector('.ml2');
+                    title.classList.add("hide");
+                    let night = document.querySelector('label');
+                    night.classList.add("nav");
                 }
                 if(nav == false){
                     if( camera.position.x >= 0){
                         camera.position.x -= 0.01;
                     }
+                    let title = document.querySelector('.ml2');
+                    title.classList.remove("hide");
+                    let night = document.querySelector('label');
+                    night.classList.remove("nav");
                 }
                 if( camera.position.z <= 2){
                     camera.position.z += 0.02;
@@ -161,16 +232,18 @@ function main()
         }
         else{
             nav = false;
-            camera.position.x = 0;
-            if( earthmesh.rotation.y  >= zoomX-0.1 && earthmesh.rotation.y <= zoomX+0.1){
+            if( camera.position.x >= 0){
+                camera.position.x -= 0.03;
+            }
+            if( earthmesh.rotation.y  >= zoomX-0.025 && earthmesh.rotation.y <= zoomX+0.025){
                 if( earthmesh.rotation.x  >= zoomY-0.1 && earthmesh.rotation.x <= zoomY+0.1){
                     if( camera.position.z <= 0.8){
-                        if( cloudmaterial.opacity <= 0){
-                            cloudmesh.rotation.y += 0.0001;
-                            console.log(earthmesh.rotation.x );
+                        if( cloudmaterial.opacity <= 0.7){
+                            cloudmesh.rotation.y += 0.0002;
                         }
                         else{
                             cloudmaterial.opacity -= 0.03;
+                            show_country_info();
                         }
                     }
                     else{
@@ -199,15 +272,28 @@ function main()
     }
     animate();
 }
-function zoom_in(cord_x,cord_y) 
+window.onload = main;
+function zoom_in(cord_x,cord_y,coutry) 
 {
    zoom = true;
    zoomX = cord_x;
    zoomY = cord_y;
+   country_name = coutry;
+
+   let night = document.querySelector('.label');
+   let info_card = document.getElementById("pop-up");
+   let info_text = document.getElementById("pop-up-text");
+   let nav = document.querySelector('.nav-btn');
+   info_card.style.backgroundImage = "url(../Images/Japon/" + country_name + ".jpg)";
+   info_text.innerHTML = country_name;
+   nav.classList.add("hide");
+   night.classList.add("hide");
+   night.classList.remove("nav");
 }
 function zoom_out() 
 {
    zoom = false;
+   hide_country_info();
 }
 function nav_out() 
 {
@@ -218,5 +304,41 @@ function nav_out()
         nav = false;
     }
 }
+function show_country_info() 
+{
+    let title = document.querySelector('.ml2');
+    let info_card = document.getElementById("pop-up");
+    let canvas = document.querySelector("canvas");
+    title.classList.add("hide");
+    info_card.classList.add("reveal");
+    canvas.classList.add("reveal");
+}
+function hide_country_info() 
+{
+    let night = document.querySelector('.label');
+    let nav = document.querySelector('.nav-btn');
+    let title = document.querySelector('.ml2');
+    let info_card = document.getElementById("pop-up");
+    let canvas = document.querySelector("canvas");
+    nav.classList.remove("hide");
+    title.classList.remove("hide");
+    info_card.classList.remove("reveal");
+    canvas.classList.remove("reveal");
+    night.classList.remove("hide");
+}
 
-window.onload = main;
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+function momo(){
+    anime.timeline({loop: false})
+    .add({
+      targets: '.ml2 .letter',
+      scale: [4,1],
+      opacity: [0,1],
+      translateZ: 0,
+      easing: "easeOutExpo",
+      duration: 950,
+      delay: (el, i) => 150*i
+    });
+}

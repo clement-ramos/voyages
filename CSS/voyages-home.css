@@ -19,13 +19,51 @@
 html{
   background-color: black;
 }
+body{
+  opacity: 1;
+  transition: 0.4s;
+}
+body.hide{
+  opacity: 0;
+}
 canvas{
+  opacity: 0;
   cursor: pointer;
+  filter: blur(0px);
+  transition: opacity 4s, filter 1s;
+}
+canvas.load{
+  opacity: 1;
+}
+canvas.reveal{
   filter: blur(10px);
 }
-
+.ml2 {
+  transform: translateX(0px);
+  position: absolute;
+  top: 4%;
+  left: 2%;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 3.5em;
+  transition: 0.8s;
+}
+.ml2.hide{
+  transform: translateX(-500px);
+}
+.ml2 .letter {
+  opacity: 0;
+  display: inline-block;
+  line-height: 1em;
+}
 .nav-btn {
+  cursor: pointer;
+  transform: translateX(0px);
   color: var(--first-color-nav);
+  transition: 0.5s;
+}
+.nav-btn.hide{
+  transform: translateX(400px);
 }
 
 .sidebar {
@@ -54,12 +92,11 @@ nav ul ul li a {
   color: var(--text-color-nav);
 }
 
-
 /* pop up */
 
-.pop-up{
+#pop-up{
+  opacity: 0;
   padding-top: 20px;
-  background-image: url(../Images/Japon/Japon1.jpg);
   background-size: 120%;
   height: 40%;
   background-color: rgba(255, 255, 255, 0.531);
@@ -74,8 +111,12 @@ nav ul ul li a {
   justify-content: center;
   justify-items: center;
   align-self: center;
+  transition: all 1s;
 }
-.pop-up p{
+#pop-up.reveal{
+  opacity: 1;
+}
+#pop-up p{
   color: white;
   text-align: center;
   font-weight: bold;
@@ -177,3 +218,78 @@ nav ul ul li a {
   }
 }
 /* Scroll Down cursor*/
+
+.checkbox {
+  opacity: 0;
+
+}
+
+.label {
+  opacity: 1;
+  width: 50px;
+  height: 26px;
+  background-color:#111;
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  transform: scale(1.5) translateX(0);
+  transition: 1s;
+}
+.label.hide {
+  width: 50px;
+  height: 26px;
+  background-color:#111;
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  transform: scale(1.5) translateX(500px);
+}
+.label.nav {
+  width: 50px;
+  height: 26px;
+  background-color:#111;
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  transform: scale(1.5) translateX(-180px);
+}
+
+.ball {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked + .label .ball{
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: rgb(255, 255, 255);
+}
+
+.fa-sun {
+  color: yellow;
+}
