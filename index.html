@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,14 +25,14 @@
       <p>The Earth</p>
       <ul>
 
-        <li><a href="#">Home</a></li>
+        <li><a >Home</a></li>
         
         <li>
-          <a href="#" class="country-btn">Pays
+          <a class="country-btn">Pays
           <span class="fas fa-angle-down"></span>
           </a>
           <ul class="country-show">
-            <li><a onclick="zoom_in(2.447,0.76,'Koree')" class="hide-btn">Korée</a></li>
+            <li><a onclick="zoom_in(2.447,0.76,'Coree')" class="hide-btn">Corée</a></li>
             <li><a onclick="zoom_in(0,1,'Canada')" class="hide-btn">Canada</a></li>
             <li><a onclick="zoom_in(5.9,0.15,'Colombie')" class="hide-btn">Colombie</a></li>
             <li><a onclick="zoom_in(4.2,1.2,'Finlande')" class="hide-btn">Finlande</a></li>
@@ -41,7 +41,7 @@
         </li>
     
         <li>
-          <a href="#"class="name-btn">Prénoms
+          <a class="name-btn">Prénoms
           <span class="fas fa-angle-down"></span>
           </a>
           <ul class="name-show">
@@ -59,20 +59,18 @@
       <p id="pop-up-text"></p>
       <div class="btn-container">
         <div class="button" onclick="zoom_out()">Retour</div>
-        <div class="button">Decouvrir</div>
+        <div class="button" onclick="redirect_Country()">Decouvrir</div>
       </div>
       <section id="arrow">
         <div class="chevron"></div>
       </section>
     </article>
-    <div>
-      <input type="checkbox" class="checkbox" id="checkbox">
+      <input type="checkbox" class="checkbox hide-btn" id="checkbox">
     <label for="checkbox" class="label hide">
       <i class="fas fa-moon"></i>
       <i class='fas fa-sun'></i>
       <div class='ball'>
     </label>
-  </div>
     <script>
         $('.country-btn').click(function(){
           $('nav ul .country-show').toggleClass("show");
