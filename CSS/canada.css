@@ -1,8 +1,13 @@
 /* SHARED */
 
-/* body {
-    background-color: #252525;
-} */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overscroll-behavior: none;
+    background-color: rgba(24, 24, 24, 1);
+}
+
 /* ---------------------------------------- */
 /*      Barre de Navigation Couleurs        */
 /* ---------------------------------------- */
@@ -49,23 +54,29 @@ nav ul ul li a {
 /* SECTION CLIP-PATH */
 
 .clip-path-title {
-    padding: 50px 40px 180px 40px;
-    display: flex;
-    background-color: #fff;
+    padding: 10px 40px 180px 40px;
+    height: 100vh;
+    /* display: flex; */
+    /* background-color: #fff; */
+    background-image: url(../Images/Canada/canada-header-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    letter-spacing: 5px;
 }
 
-.clip-path-background {
+/* .clip-path-background {
+    margin-top: -400px;
     padding: 400px 32px;
     background-image: url("../Images/Canada/canada-header-bg.jpg");
     background-size: cover;
     background-position: center center;
-    margin-top: -400px;
-    background-color: white;
+    background-color: #fff;
     animation: show-banner 6s infinite ease-in-out;
-}
+} */
 
 
-@keyframes show-banner{
+/* @keyframes show-banner{
     0%{
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -82,7 +93,7 @@ nav ul ul li a {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
-}
+} */
 
 /* SECTIOON PRACTICAL */
 
@@ -117,13 +128,81 @@ nav ul ul li a {
     transition: .5s;
 }
 
-.earth-plan img {
-    margin: 0 40px;
-    width: 250px;
+.canada-plan img {
+    margin: 20px 40px 40px 40px;
+    width: 300px;
+}
+
+.canada-plan img:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.canada-plan img:not(:hover) {
+    transform: scale(1);
+    transition: .5s;
 }
 
 .practical-logo img {
     margin-right: 20px;
+}
+
+/* SECTION ANIMATION */
+
+.animate {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200vh;
+    overflow: hidden;
+    background-color: transparent;
+    /* background-color: #fff; */
+}
+
+.scrollable {
+    will-change: transform;
+}
+
+.animateBox {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.project {
+    position: absolute;
+    top: 200vh;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    mix-blend-mode: difference;
+}
+
+.project h1 {
+    color: #fff;
+    /* color: rgba(24, 24, 24, 1); */
+    mix-blend-mode: difference;
+}
+
+.container {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container img {
+    width: 40vw;
+    /* filter: grayscale(100%); */
+    will-change: transform;
+    z-index: -1;
 }
 
 /* SECTION DSECRIPTION */
@@ -172,6 +251,30 @@ nav ul ul li a {
     border-radius: 5px;
 }
 
+
+/* SECTION BAR */
+
+.bar {
+    padding: 25px 0;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    font-size: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.bar-content {
+    width: 100%;
+    display: block;
+    transform: translateX(100%);
+    animation: move 30s linear infinite;
+}
+
+@keyframes move {
+    to { transform: translateX(-800px); }
+}
+
 /* SECTION BLOG */
 
 .blog-us {
@@ -215,7 +318,8 @@ nav ul ul li a {
     padding: 40px 0;
     display: flex;
     justify-content: flex-start;
-    background-image: url(../Images/Canada/palm-bg.jpg);
+    background-image: url(../Images/Canada/canada-love.jpg);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -228,75 +332,4 @@ nav ul ul li a {
     background-color: #fff;
     border-radius: 5px;
     text-align: justify;
-}
-
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-    overscroll-behavior: none;
-    background-color: rgba(24, 24, 24, 1);
-}
-
-/* main {
-    display: flex;
-    flex-flow: column wrap;
-    
-} */
-
-.animate {
-    /* position: fixed; */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200vh;
-    overflow: hidden;
-    background-color: transparent;
-}
-
-.scrollable {
-    will-change: transform;
-}
-
-.animateBox {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    /* border: 1px solid #000; */
-}
-
-.project {
-    position: absolute;
-    top: 200vh;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* z-index: 1;
-    background-color: transparent;
-    mix-blend-mode: difference; */
-}
-
-.project h1 {
-    color: #fff;
-    mix-blend-mode: difference;
-}
-
-.container {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.container img {
-    width: 300px;
-    filter: grayscale(100%);
-    will-change: transform;
 }
