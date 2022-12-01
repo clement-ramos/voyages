@@ -47,9 +47,11 @@ function animateImages(){
         
         let { top } = images[i].getBoundingClientRect();
         if(i % 2 == 0){
-            images[i].style.transform = `rotate(${top * 0.05}deg )`;
+            // images[i].style.transform = `rotate(${top * 0.03}deg )`;
+            images[i].style.transform = `translateX(${top * 0.09}px )`;
         }else{
-            images[i].style.transform = `rotate(-${top * 0.05}deg )`;
+            // images[i].style.transform = `rotate(${(top * 0.03 * -1)}deg )`;
+            images[i].style.transform = `translateX(${(top * 0.09 * -1)}px )`;
         } 
     }
 }
