@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyage en Finlande</title>
+    <link rel="icon" href="./Images/Finlande/ours.png">
+    <link rel="stylesheet" href="./CSS/voyages.css" type="text/css"/>
+    <link rel="stylesheet" href="./CSS/voyages-home.css">
+    <link rel="stylesheet" href="./CSS/Finlande.css" type="text/css"/>
+    <script src="https://kit.fontawesome.com/058d5dcce5.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/289fbec248.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <a href="#" class="nav-btn">
+        <span class="fas fa-align-justify fa-2xl" onclick="nav_out()"></span>
+    </a>
+  
+    <nav class="sidebar">
+        <p>Navigation</p>
+        <ul>
+
+            <li><a href="#">Home</a></li>
+            
+            <li>
+            <a href="#" class="country-btn">Pays
+            <span class="fas fa-angle-down"></span>
+            </a>
+            <ul class="country-show">
+                <li><a onclick="zoom_in(2.4,0.73)" class="hide-btn">Korée</a></li>
+                <li><a onclick="zoom_in(0,1)" class="hide-btn">Canada</a></li>
+                <li><a onclick="zoom_in(5.9,.15)" class="hide-btn">Colombie</a></li>
+                <li><a onclick="zoom_in(4.2,1.2)" class="hide-btn">Finlande</a></li>
+                <li><a onclick="zoom_in(2.2,0.73)" class="hide-btn">Japon</a></li>
+            </ul>
+            </li>
+        
+            <li>
+            <a href="#"class="name-btn">Prénoms
+            <span class="fas fa-angle-down"></span>
+            </a>
+            <ul class="name-show">
+                <li><a href="#">Clément Marin</a></li>
+                <li><a href="#">Yoann Fermaud</a></li>
+                <li><a href="#">Elie Aigon</a></li>
+                <li><a href="#">Aurore Thomas</a></li>
+                <li><a href="#">Clément Ramos</a></li>
+            </ul>
+            </li>
+            
+        </ul>
+    </nav>
+
+    <header>
+        <section class="clip-path-title">
+            <h1>F<br>I<br>N<br>L<br>A<br>N<br>D<br>E</h1>
+        </section>
+        <section class="clip-path-background">
+        </section>
+    </header>
+
+    <main>
+        <section class="description-trip">
+            <article>
+                <h2>Finlande, pays le plus heureux du monde</h2>
+                <p>Vous êtes à la recherche d’une destination de voyage dépaysante, inhabituelle, loin du tourisme de masse et hors des sentiers battus ? Ne cherchez plus, nous l’avons trouvée ! </p>
+                <p>La Finlande est un pays nordique situé au nord de l'Europe au bord de la mer Baltique. Il compte quelque 5,5 millions d'habitants 
+                    et est reconnu comme le pays le plus heureux du monde depuis plusieurs années consécutives.</p>
+                <p> Avec ses 40 parcs nationaux, 180 000 îles et plus de 188 000 lacs, la Finlande offre une nature omniprésente et des paysages à couper
+                    le souffle. L'architecture n'est cependant pas en reste puisque l'on y retrouve de nombreux chefs-d'oeuvre dans tout le pays. Quant à la gastronomie,
+                    la cuisine finlandaise est une cuisine simple, savoureuse et énergétique élaborée avec des produits de très bonne qualité. On y utilise aussi très peu d’épices. En effet, il n’y en a pas besoin car on retrouve le vrai goût des aliments notamment grâce à l’utilisation des produits sains et de bonne qualité.
+                    Les finlandais sont très sensibles au bien manger et sont adeptes du slow food et du bio. Ils privilégient les produits locaux et de saison, ce qui se ressent au niveau des papilles.
+                </p>
+                <p> Idéal pour se ressourcer, ce pays propose un art de vivre qui se ressent en tout point. Bienvenue dans ce voyage</p>
+            </article>
+            <div class="description-trip-pictures">
+                <div class="description-trip-pictures-top">
+                    <img src="./Images/Finlande/drapeau-sur-mer.jpg" 
+                        alt="Drapeau de la Finlande sur un bateau"/>
+                    <img src="./Images/Finlande/helsinki-rue-cathedrale.jpg" 
+                        alt="Vue de la cathédrale depuis la rue"/>
+                </div>
+                <img src="./Images/Finlande/vue-du-ciel-helsinki.jpg" 
+                     alt="Vue du ciel de Helsinki"/>
+            </div>
+            </a>
+        </section>
+
+        <section class="good-to-know">
+            <div class="good-to-know-title">
+                <h2>Bon à savoir</h2>
+            </div>
+            <div class="good-to-know-all">
+                <div class="good-to-know-information">
+                    <img src="./Images/Finlande/banque.png"
+                         alt="Logo d'un bâtiment ancien"
+                         class="icon"/>
+                    <figcaption>Capitale : </br>Helsinki</figcaption>
+                </div>
+                <div class="good-to-know-information">
+                    <img src="./Images/Finlande/silhouette-dutilisateurs-multiples.png"
+                         alt="Logo d'une population"
+                         class="icon"/>
+                    <figcaption>Population : </br>5,54 millions</figcaption>
+                </div>
+                <div class="good-to-know-information">
+                    <img src="./Images/Finlande/langue.png"
+                         alt="Logo d'un chat en différentes langues"
+                         class="icon"/>
+                    <figcaption>Langues officielles : </br>Finnois, Suédois</figcaption>
+                </div>
+                <div class="good-to-know-information">
+                    <img src="./Images/Finlande/devises.png"
+                         alt="Logo d'une devise"
+                         class="icon"/>
+                    <figcaption>Devise : </br> l'Euro</figcaption>
+                </div>
+                <div class="good-to-know-information">
+                    <img src="./Images/Finlande/finlande.png"
+                         alt="Logo de la Finlande"
+                         class="icon"/>
+                    <figcaption>Superficie :</br> 338 440 km²</figcaption>
+                </div>
+            </div>
+        </section>
+
+        <section class="places-to-see">
+            <div class="places-to-see-grid-pictures">
+                <div class="div1">
+                    <img src="./Images/Finlande/grid-1-helsinki.jpg"
+                    alt="Helsinki"
+                    class="grid-vertical"/>
+                </div>
+                    <div class="div2">
+                        <img src="./Images/Finlande/grid-2-laponie.jpg"
+                             alt="Laponie"
+                             class="grid-center grid-laponie"/>
+                    </div>
+                    <div class="div3"> 
+                        <img src="./Images/Finlande/grid-3-aland.jpg"
+                             alt="Archipel d'Aland"
+                             class="grid-vertical grid-aland"/>
+                    </div>
+                    <div class="div4"> 
+                        <img src="./Images/Finlande/grid-4-grands-lacs.jpg"
+                             alt="Grands Lacs de Finlande"
+                             class="grid-vertical grid-lacs"/>
+                    </div>
+                    <div class="div5"> 
+                        <img src="./Images/Finlande/grid-5-porvoo.jpg"
+                             alt="Porvoo"
+                             class="grid-vertical gris-porvoo"/>
+                    </div>
+                    <div class="div6"> 
+                        <img src="./Images/Finlande/grid-6-lemmenjoki.jpg"
+                             alt="Lemmenjoki"
+                             class="grid-horizontal grid-lemmenjoki"/>
+                    </div>
+                    <div class="div7"> 
+                        <img src="./Images/Finlande/grid-7-carelie.jpg"
+                             alt="Carelie finlandaise"
+                             class="grid-horizontal grid-carelie"/>
+                    </div>
+                    <div class="div8"> 
+                        <img src="./Images/Finlande/grid-8-suomenlinna.jpg"
+                             alt="Suomenlinna"
+                             class="grid-horizontal grid-soumenlinna"/>
+                    </div>
+                    <div class="div9"> 
+                        <img src="./Images/Finlande/grid-9-turku.jpg"
+                             alt="Turku"
+                             class="grid-vertical grid-turku"/>
+                    </div>
+                    <div class="div10"> 
+                        <img src="./Images/Finlande/grid-10-jyvaskyla.jpg"
+                             alt="Jyvaskyla"
+                             class="grid-vertical grid-jyvaskyla"/>
+                    </div>
+            </div>
+
+            <div class="places-to-see-list">
+                <h2>Endroits à visiter</h2>
+                <div class="div12">
+                    <a href="#">
+                        <p>1 - Helsinki, Capitale de la Finlande</p>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <a href="#">
+                    <p>2 - La Laponie</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#">
+                    <p>3 - L'archipel de Aland</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#">
+                    <p>4 - La région des Grands Lacs</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#">
+                    <p>5 - Ville de Porvoo</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#">
+                    <p>6 - Parc national de Lemmenjoki</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#">
+                    <p>7 - La carélie finlandaise</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#">
+                    <p>8 - La forteresse de Suomenlinna</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#">
+                    <p>9 - La ville médiévale de Turku et son archipel</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#">
+                    <p>10 - La ville de Jyväskylä</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="rovaniemi">
+            <article class="rovaniemi-text">
+                <h2>Rovaniemi</h2>
+                <p>Ville située au confluent du Kemijoki et de l’Ounasjoki sur le 
+                    cercle polaire, Rovaniemi est la capitale officielle et la porte d’entrée de la Laponie 
+                    finlandaise.
+                </p>
+                <p>Quelle que soit la motivation de votre voyage, il s'agit sans nul doute de la destination idéale.
+                    Son infrastructure bien pensée, ses sites d’intérêt locaux et les opportunités de vivre des expériences uniques en font 
+                    une ville plébiscitée pour les voyages individuels, en groupes et d’entreprise.
+                </p>
+                <p>Rovaniemi est une destination prisée tout au long de l’année. Pendant l’hiver, les activités qui y sont proposées incluent des 
+                    safaris en motoneige, des balades avec des rennes ou des huskies et la chasse aux aurores boréales. En été, vous pourrez vous 
+                    détendre le temps d’une croisière en barque traditionnelle sur les deux cours d’eau qui traversent la ville de Rovaniemi puis vous 
+                    rendre jusqu’à une ferme de rennes ou encore vous laisser tenter par une croisière sous le soleil de minuit.
+                </p>
+                <p>Rovaniemi est aussi la ville officielle du Père Noël. Il tient ses bureaux dans le Village du Père Noël, à 8,6 km du centre-ville de Rovaniemi. Il y accueille les visiteurs du monde entier tous les jours de l’année.
+                    Vous pourrez également visiter dans le Village du Père Noël son bureau de poste officiel et y envoyer des cartes postales et des cartes de vœux tout au long de l’année.
+                </p>
+              </article>
+        </section>
+
+        <section class="helsinki">
+            <article>
+                <h2>Helsinki, capitale de la finlande</h2>
+                <p>Helsinki, capitale de la Finlande, est une péninsule entourée de centaines d'îles. Elle est aussi le principal port 
+                    du pays pour le transport de marchandises et de passagers à travers le golfe de Finlande et la mer Baltique. Sa situation 
+                    en fait une ville cosmopolite et une passerelle culturelle entre l'Europe de l'Ouest et de l'Est.
+                </p>
+                <p>Helsinki est une ville d'eau mais aussi d'espaces verts qui occupent un tiers de son territoire. Elle a toujours su conserver une belle harmonie de style entre son architecture et son superbe cadre naturel. Helsinki a été élue capitale mondiale du design en 2012, puis ville créative de design en 2014.
+                    Dans cet environnement est né un art culinaire particulier. La gastronomie finlandaise est en pleine évolution, particulièrement à Helsinki, avec des produits frais et locaux venus de la mer, des lacs et des forêts. Poissons, champignons et beaucoup de baies seront dans vos assiettes.
+                </p>
+                <p>La capitale finlandaise est divisée en 8 districts administratifs: Sud, Ouest, Centre, Nord, Nord-Est, Sud-Est, Est et Estresundom, chacun étant divisé en quartiers.
+                    Le district Sud est le plus intéressant pour les touristes. La forteresse de Sveaborg est très populaire auprès des visiteurs de la ville ! Elle est située sur plusieurs îles qui font partie d'Helsinki. Ce système de bastions est considéré comme la signature de la ville depuis plusieurs centaines d'années. 
+                    Mais l'épicentre de la vie culturelle, éducative, commerciale et politique de la ville est le quartier de Kruununhaka, également situé dans le district sud. Voici le palais présidentiel, la célèbre place du Sénat, l'hôtel de ville, les banques, les universités, les musées, les bibliothèques, les parcs et la 
+                    cathédrale de renommée mondiale.
+                </p>
+            </article>
+            <a href="#">
+              <img src="./Images/Finlande/cathedrale-avec-arbre.jpg" 
+                   alt="Photographie de la cathédrale de Helsinki" />
+            </a>
+        </section>
+        
+        <div class="food-title">
+            <h2>Spécialités culinaires</h2>
+        </div>
+        <section class="food">
+            <div class="food-all">
+                <img src="./Images/Finlande/cinnamon.jpg"
+                     alt="Korvapuusti"/>
+                <div class="food-hidden">
+                    <h4>Korvapuusti</h4>
+                    <p>Ce sont les pâtisseries incontournables d’un voyage en Finlande. Comme dans les autres pays nordiques tels que la Suède ou le Danemark, ces brioches à la cannelle et à la cardamome sont très populaires et on en trouve partout !</p>
+                </div>
+            </div>
+            <div class="food-all">
+                <img src="./Images/Finlande/lohikeitto.png"
+                     alt="Lohikeitto"/>
+                <div class="food-hidden">
+                    <h4>lohikeitto</h4>
+                    <p>La soupe de saumon crémeuse est un plat courant en Finlande et dans d'autres pays nordiques. Il se compose de filets de saumon, de pommes de terre bouillies, de carottes et de poireaux. La soupe est servie chaude, avec un peu d'aneth.</p>
+                </div>
+            </div>
+            <div class="food-all">
+                <img src="./Images/Finlande/karjalanpiraka.jpg"
+                        alt="Karjalanpiraka"/>
+                <div class="food-hidden">
+                    <h4>Karjalanpiirakka</h4>
+                    <p>La Karjalanpiirakka se compose d’une pâte à base d’un mélange de farine de seigle (ruisjauho). de farine d’épeautre et d’une garniture de riz au lait. La Karjalanpiirakka se déguste avec un mélange de beurre et d’œuf dur déposé sur le dessus de la tarte.</p>
+                </div>
+            </div>
+            <div class="food-all">
+                <img src="./Images/Finlande/leipajusto.jpg"
+                        alt="Leipajusto"/>
+                <div class="food-hidden">
+                    <h4>leipäjuusto</h4>
+                    <p>Le leipäjuusto est un fromage particulier à pâte molle préparé à base de lait de vache. On l'appelle aussi le pain au fromage. Il est souvent consommé froid avec de la confiture aux mûres mais peut aussi être fondu à la poêle.</p>
+
+                </div>
+            </div>
+            <div class="food-all">
+                <img src="./Images/Finlande/mustikkapiiras.jpg"
+                        alt="Mustikkapiiras"/>
+                <div class="food-hidden">
+                    <h4>mustikkapiirakka</h4>
+                    <p>En juillet et août, les forêts finlandaises regorgent de myrtilles. Par conséquent, les Finlandais en cueillent à volonté avant de les congeler pour l'hiver. Ils préparent alors tout au long de l'année ces délicieuses tartes aux myrtilles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-us">
+            <h2>Découvrez nos autres voyages</h2>
+            <div class="blog-us-tab">
+              <article>
+                <a href="#">
+                  <img
+                    src="./Images/Finlande/japon2.jpg"
+                    alt="Image du Japon"/>
+                  <h4>Japon</h4>
+                </a>
+              </article>
+              <article>
+                <a href="#">
+                  <img
+                    src="./Images/Finlande/canada.jpg"
+                    alt="Image du Canada"/>
+                  <h4>Canada</h4>
+                </a>
+              </article>
+            </div>
+            <div class="blog-us-tab">
+              <article>
+                <a href="#">
+                  <img
+                    src="./Images/Finlande/comlombia.jpg"
+                    alt="Image de la Colombie"/>
+                  <h4>Colombie</h4>
+                </a>
+              </article>
+              <article>
+                <a href="#">
+                  <img
+                    src="./Images/Finlande/korea.jpg"
+                    alt="Image de la Corée"/>
+                  <h4>Coree du Sud</h4>
+                </a>
+              </article>
+            </div>
+        </section>
+
+        <footer class="contact">
+            
+            <div class="contact-all">
+                <div class="contact-title">
+                    <h2>Des questions ?</h2>
+                </div>
+                <form action="">
+                    <div class="contact-form">
+                        <div class="contact-nom-prenom">
+                            <input type="nom-prenom" 
+                                    name="nom" 
+                                    placeholder="Nom">
+                            <input type="nom-prenom" 
+                                    name="prenom"
+                                    placeholder="Prénom"/>
+                        </div>
+                        <input type="text"
+                                name="email" 
+                                placeholder="Email">
+                        <textarea name="subject"
+                                placeholder="Message" 
+                                style="height:150px"></textarea>
+                        <input type="submit" value="Envoyer">
+                    </div>
+            </form>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        $('.country-btn').click(function(){
+          $('nav ul .country-show').toggleClass("show");
+        });
+        $('.name-btn').click(function(){
+          $('nav ul .name-show').toggleClass("show");
+        });
+    
+        $('.nav-btn').click(function(){
+          $('.sidebar').toggleClass("show");
+          $('.nav-btn').toggleClass("show");
+        });
+
+        $('.hide-btn').click(function(){
+          $('.sidebar').removeClass("show");
+          $('.nav-btn').removeClass("show");
+        });
+      </script>
+</body>
+</html>
