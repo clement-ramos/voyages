@@ -37,7 +37,7 @@ h1 {
   font-size: 5em;
   font-weight: lighter;
   line-height: 100px;
-  margin: 30px 0;
+  margin: 20px 20px 0px 20px;
   color: black;
 }
 
@@ -46,7 +46,7 @@ h2 {
   font-size: 3.75em;
   font-weight: lighter;
   line-height: 70px;
-  margin: 20px 0;
+  margin: 0 15px;
   color: black;
 }
 
@@ -54,7 +54,7 @@ h3 {
   font-family: 'Voyage', Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
   font-size: 2.75em;
   font-weight: lighter;
-  margin: 15px 0;
+  margin: 15px;
   color: black;
 }
 
@@ -62,7 +62,7 @@ h4 {
   font-family: 'Voyage', Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
   font-size: 2em;
   font-weight: lighter;
-  margin: 10px 0;
+  margin: 10px;
   color: black;
 }
 
@@ -70,7 +70,7 @@ h5 {
   font-family: 'Voyage', Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
   font-size: 1.75em;
   font-weight: lighter;
-  margin: 10px 0;
+  margin: 10px;
   color: black;
 }
 
@@ -78,8 +78,12 @@ h6 {
   font-family: 'Voyage', Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
   font-size: 1.25em;
   font-weight: lighter;
-  margin: 10px 0;
+  margin: 10px;
   color: black;
+}
+
+.test {
+  margin: 30px;
 }
 
 /* ---------------------------------------- */
@@ -111,10 +115,6 @@ a {
   color: black;
 }
 
-p {
-  margin: 15px 0;
-}
-
 /* ---------------------------------------- */
 /*                    ICON                  */
 /* ---------------------------------------- */
@@ -138,12 +138,11 @@ p {
 */
 
 .nav-btn {
-  z-index: 5;
   text-decoration: none;
 }
 
 .sidebar {
-  z-index: 5;
+  z-index: 1;
   position: fixed;
   width: 250px;
   height: 100%;
