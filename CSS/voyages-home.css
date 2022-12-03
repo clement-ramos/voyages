@@ -10,25 +10,34 @@
 */
 
 /* Vous pouvez définir ici la couleur de votre nav-bar la troisième couleur est celle du hover*/
-:root {
+html{
+  background-color: black;
   --first-color-nav: #BBA791;
   --second-color-nav: #2F71A4;
   --hover-color-nav: #669a6e;
   --text-color-nav: #e6e6e6;
 }
-html{
+html.dark{
   background-color: black;
+  --first-color-nav: #ffffff;
+  --second-color-nav: #000000;
+  --hover-color-nav: #474747;
+  --text-color-nav: #e6e6e6;
 }
 body{
+  overflow: hidden;
+  transition: 0.2s;
   opacity: 1;
-  transition: 0.4s;
 }
 body.hide{
   opacity: 0;
 }
+body.fadeout{
+  opacity: 0;
+  transition: 1s;
+}
 canvas{
   opacity: 0;
-  cursor: pointer;
   filter: blur(0px);
   transition: opacity 4s, filter 1s;
 }
@@ -96,6 +105,7 @@ nav ul ul li a {
 
 #pop-up{
   opacity: 0;
+  transform: translateY(-450px);
   padding-top: 20px;
   background-size: 120%;
   height: 40%;
@@ -114,6 +124,7 @@ nav ul ul li a {
   transition: all 1s;
 }
 #pop-up.reveal{
+  transform: translateY(0px);
   opacity: 1;
 }
 #pop-up p{
@@ -236,9 +247,9 @@ nav ul ul li a {
   padding: 5px;
   position: absolute;
   top: 5%;
-  left: 90%;
-  transform: scale(1.5) translateX(0);
-  transition: 1s;
+  left: 93%;
+  transform: scale(1.5) translateX(0px);
+  transition: 0.8s;
 }
 .label.hide {
   width: 50px;
@@ -252,7 +263,7 @@ nav ul ul li a {
   position: absolute;
   top: 5%;
   left: 90%;
-  transform: scale(1.5) translateX(500px);
+  transform: scale(1.5) translateX(550px);
 }
 .label.nav {
   width: 50px;
@@ -266,7 +277,7 @@ nav ul ul li a {
   position: absolute;
   top: 5%;
   left: 90%;
-  transform: scale(1.5) translateX(-180px);
+  transform: scale(1.5) translateX(-220%);
 }
 
 .ball {
