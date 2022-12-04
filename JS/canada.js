@@ -25,7 +25,7 @@ function smoothScroll(){
 }
 
 function sticky(){
-    let offset = window.innerHeight * 2;
+    let offset = window.innerHeight * 2.2;
     // console.log(offset);
     // console.log(current);
     if(current < offset){
@@ -33,7 +33,7 @@ function sticky(){
     }
     if(current >= offset && current <= offset * 2){
         // for(let j = 0; j < 1; j++){
-        //     stickyProject.style.transform = `translate3d(0, ${(current - offset) * 2}px, 0)`;
+        //     stickyProject.style.transform = `translate3d(0, ${(current - offset) * j}px, 0)`;
         // }
         stickyProject.style.transform = `translate3d(0, ${(current - offset) * 2}px, 0)`;
     }
