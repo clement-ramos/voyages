@@ -8,13 +8,16 @@ body{
 html {
   scroll-behavior: smooth;
 }
+p{
+  margin: 20px 0;
+}
 /* ---------------------------------------- */
 /*           Barre de Navigation            */
 /* ---------------------------------------- */
 
 /* Vous pouvez définir ici la couleur de votre nav-bar la troisième couleur est celle du hover*/
 :root {
-  --first-color-nav: #006C7F;
+  --first-color-nav: #B0F2B6;
   --second-color-nav: #1b1b1b;
   --hover-color-nav: #1e1e1e;
   --text-color-nav: #e6e6e6;
@@ -122,9 +125,9 @@ nav ul li a:hover span {
 /* ---------------------------------------- */
 
 :root{
-  --first-color-main: #006C7F;
+  --first-color-main: #B0F2B6;
   --second-color-main: #FFFFFF;
-  --hover-color-main: #044F67;
+  --hover-color-main: #083B32;
 }
 .clip-path{
   margin: 20px 0;
@@ -135,53 +138,19 @@ nav ul li a:hover span {
 .clip-path h1{
   margin: 0 auto;
 }
-.clip-path-background-first{
-  margin-top: -40px;
-  height: 800px;
-  background-image: url("../Images/Japon/Japon1.jpeg");
-  background-size: cover;
-  background-position: center center;
-  position: absolute;
-  top: 100px;
-  width: 100%;
-  background-color: var(--second-color-main);
-  animation: show-banner-first 9s infinite ease-in-out;
-}
+
 
 .clip-path-background-second{
   margin-top: -40px;
   height: 800px;
-  background-image: url("../Images/Japon/Japon1.jpeg");
+  background-image: url("../Images/Japon/Colombie.jpg");
   background-size: cover;
   background-position: center center;
   position: absolute;
   top: 100px;
   width: 100%;
   background-color: var(--second-color-main);
-  animation: show-banner-second 9s infinite ease-in-out;
-}
-
-@keyframes show-banner-first {
-  0% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  }
-  25% {
-    -webkit-clip-path: polygon(0 0, 40% 0, 10% 100%, 0 100%);
-clip-path: polygon(0 0, 40% 0, 10% 100%, 0 100%);
-  }
-  50%{
-    -webkit-clip-path: polygon(0 0, 10% 0, 0 100%, 0 100%);
-    clip-path: polygon(0 0, 10% 0, 0 100%, 0 100%);
-  }
-  75% {
-    -webkit-clip-path: polygon(0 0, 40% 0, 10% 100%, 0 100%);
-    clip-path: polygon(0 0, 40% 0, 10% 100%, 0 100%);
-  }
-  100% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  }
+  animation: show-banner-second 7s infinite ease-in-out;
 }
 
 @keyframes show-banner-second {
@@ -193,10 +162,7 @@ clip-path: polygon(0 0, 40% 0, 10% 100%, 0 100%);
     -webkit-clip-path: polygon(90% 0, 100% 0, 100% 100%, 60% 100%);
     clip-path: polygon(90% 0, 100% 0, 100% 100%, 60% 100%);
   }
-  50%{
-    -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 90% 100%);
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 90% 100%);
-  }
+
   75% {
     -webkit-clip-path: polygon(90% 0, 100% 0, 100% 100%, 60% 100%);
     clip-path: polygon(90% 0, 100% 0, 100% 100%, 60% 100%);
