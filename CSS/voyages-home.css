@@ -10,15 +10,69 @@
 */
 
 /* Vous pouvez définir ici la couleur de votre nav-bar la troisième couleur est celle du hover*/
-:root {
-  --first-color-nav: green;
-  --second-color-nav: #1b1b1b;
-  --hover-color-nav: #1e1e1e;
+html{
+  background-color: black;
+  --first-color-nav: #BBA791;
+  --second-color-nav: #2F71A4;
+  --hover-color-nav: #669a6e;
   --text-color-nav: #e6e6e6;
 }
-
+html.dark{
+  background-color: black;
+  --first-color-nav: #ffffff;
+  --second-color-nav: #000000;
+  --hover-color-nav: #474747;
+  --text-color-nav: #e6e6e6;
+}
+body{
+  overflow: hidden;
+  transition: 0.2s;
+  opacity: 1;
+}
+body.hide{
+  opacity: 0;
+}
+body.fadeout{
+  opacity: 0;
+  transition: 1s;
+}
+canvas{
+  opacity: 0;
+  filter: blur(0px);
+  transition: opacity 4s, filter 1s;
+}
+canvas.load{
+  opacity: 1;
+}
+canvas.reveal{
+  filter: blur(10px);
+}
+.ml2 {
+  transform: translateX(0px);
+  position: absolute;
+  top: 4%;
+  left: 2%;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 3.5em;
+  transition: 0.8s;
+}
+.ml2.hide{
+  transform: translateX(-500px);
+}
+.ml2 .letter {
+  opacity: 0;
+  display: inline-block;
+  line-height: 1em;
+}
 .nav-btn {
+  cursor: pointer;
+  transform: translateX(0px);
   color: var(--first-color-nav);
+  transition: 0.5s;
+}
+.nav-btn.hide{
+  transform: translateX(400px);
 }
 
 .sidebar {
@@ -45,4 +99,208 @@ nav ul li a:hover {
 }
 nav ul ul li a {
   color: var(--text-color-nav);
+}
+
+/* pop up */
+
+#pop-up{
+  opacity: 0;
+  transform: translateY(-450px);
+  padding-top: 20px;
+  background-size: 120%;
+  height: 40%;
+  background-color: rgba(255, 255, 255, 0.531);
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  width: 30%;
+  z-index: 10;
+  left: 35%;
+  top: 5%;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-self: center;
+  transition: all 1s;
+}
+#pop-up.reveal{
+  transform: translateY(0px);
+  opacity: 1;
+}
+#pop-up p{
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.btn-container{
+  position: relative;
+  top: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.pop-up img{
+  opacity: 0;
+  width: 100%;
+  border-radius: 20px;
+}
+.button {
+  border-radius: 20px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100px;
+  color: white;
+  background:transparent;
+  padding:12px 24px;
+  border:solid 2px white;
+  display:inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: all .4s;
+}
+.button:before {
+  content:'';
+  position:absolute;
+  z-index: -1;
+  background:white;
+  left:-20px;
+  top:-20px;
+  width:0%;
+  height:calc(100% + 40px);
+  transition: all .4s;
+  transform: skew(24deg);
+}
+
+.button:hover:before {
+  width:calc(100% + 40px);
+}
+.button:hover {
+  cursor:pointer;
+  color:black;
+}
+/* Scroll Down cursor*/
+#arrow{
+  pointer-events: none;
+  overflow: hidden;
+  display: flex;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+  justify-content: center;
+}
+.chevron {
+  margin-top: 15%;
+  position: absolute;
+  width: 20%;
+  height: 8%;
+  animation: move 0.8s alternate infinite;
+}
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #ffffff;
+} 
+.chevron:before {
+  left: 1px;
+  transform: skew(0deg, 30deg);
+}
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(80px);
+  }
+}
+/* Scroll Down cursor*/
+
+.checkbox {
+  opacity: 0;
+
+}
+
+.label {
+  opacity: 1;
+  width: 50px;
+  height: 26px;
+  background-color:#111;
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: absolute;
+  top: 5%;
+  left: 93%;
+  transform: scale(1.5) translateX(0px);
+  transition: 0.8s;
+}
+.label.hide {
+  width: 50px;
+  height: 26px;
+  background-color:#111;
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  transform: scale(1.5) translateX(550px);
+}
+.label.nav {
+  width: 50px;
+  height: 26px;
+  background-color:#111;
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  transform: scale(1.5) translateX(-220%);
+}
+
+.ball {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked + .label .ball{
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: rgb(255, 255, 255);
+}
+
+.fa-sun {
+  color: yellow;
 }

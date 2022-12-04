@@ -1,0 +1,453 @@
+/* ---------------------------------------- */
+/*           General Informations           */
+/* ---------------------------------------- */
+
+body {
+  background-color: var(--first-color-main);
+}
+html {
+  scroll-behavior: smooth;
+}
+/* ---------------------------------------- */
+/*           Barre de Navigation            */
+/* ---------------------------------------- */
+
+/* Vous pouvez définir ici la couleur de votre nav-bar la troisième couleur est celle du hover*/
+:root {
+  --first-color-nav: #006c7f;
+  --second-color-nav: #1b1b1b;
+  --hover-color-nav: #1e1e1e;
+  --text-color-nav: #e6e6e6;
+}
+.nav-btn {
+  z-index: 2;
+  text-decoration: none;
+  color: var(--first-color-nav);
+}
+.sidebar {
+  z-index: 3;
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: var(--second-color-nav);
+  transform: translateX(400%);
+  transition: 0.6s;
+}
+.sidebar.show {
+  transform: translateX(0%);
+}
+.sidebar p {
+  color: var(--text-color-nav);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  background: var(--hover-color-nav);
+  letter-spacing: 1px;
+}
+nav ul {
+  background: var(--second-color-nav);
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+nav ul li {
+  line-height: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+nav ul li a {
+  cursor: pointer;
+  color: var(--text-color-nav);
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: var(--first-color-nav);
+  background: var(--hover-color-nav);
+  border-bottom-color: var(--first-color-nav);
+}
+nav ul ul {
+  position: static;
+  display: none;
+}
+
+nav ul .country-show.show {
+  display: block;
+}
+nav ul .name-show.show {
+  display: block;
+}
+
+nav ul ul li {
+  line-height: 42px;
+  border-bottom: none;
+}
+nav ul ul li a {
+  font-size: 17px;
+  color: var(--text-color-nav);
+  padding-left: 80px;
+}
+nav ul li a span {
+  position: absolute;
+  margin-top: 20px;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: transform 0.4s;
+}
+nav ul li a:hover span {
+  transform: translateY(-50%) rotate(-180deg);
+}
+.nav-btn {
+  position: fixed;
+  bottom: 50%;
+  right: 0;
+  width: 50px;
+  transition: 0.6s;
+}
+.nav-btn.show {
+  z-index: 100;
+  transform: translateX(-200px) rotate(-90deg);
+}
+/* ---------------------------------------- */
+/*                Clip-Path                 */
+/* ---------------------------------------- */
+
+:root {
+  --first-color-main: #006c7f;
+  --second-color-main: #ffffff;
+  --hover-color-main: #044f67;
+}
+.clip-path {
+  margin: 20px 0;
+  padding: 400px 0;
+  display: flex;
+  background-color: var(--second-color-main);
+}
+.clip-path h1 {
+  margin: 0 auto;
+}
+.clip-path-background-first {
+  margin-top: -40px;
+  height: 800px;
+  background-image: url("../Images/Japon/Japon-Banner.jpeg");
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  background-color: var(--second-color-main);
+  animation: show-banner-first 9s infinite ease-in-out;
+}
+
+.clip-path-background-second {
+  margin-top: -40px;
+  height: 800px;
+  background-image: url("../Images/Japon/Japon-Banner.jpeg");
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  background-color: var(--second-color-main);
+  animation: show-banner-second 9s infinite ease-in-out;
+}
+
+@keyframes show-banner-first {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  25% {
+    -webkit-clip-path: polygon(0 0, 40% 0, 10% 100%, 0 100%);
+    clip-path: polygon(0 0, 40% 0, 10% 100%, 0 100%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0 0, 10% 0, 0 100%, 0 100%);
+    clip-path: polygon(0 0, 10% 0, 0 100%, 0 100%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0 0, 40% 0, 10% 100%, 0 100%);
+    clip-path: polygon(0 0, 40% 0, 10% 100%, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes show-banner-second {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  25% {
+    -webkit-clip-path: polygon(90% 0, 100% 0, 100% 100%, 60% 100%);
+    clip-path: polygon(90% 0, 100% 0, 100% 100%, 60% 100%);
+  }
+  50% {
+    -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 90% 100%);
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 90% 100%);
+  }
+  75% {
+    -webkit-clip-path: polygon(90% 0, 100% 0, 100% 100%, 60% 100%);
+    clip-path: polygon(90% 0, 100% 0, 100% 100%, 60% 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+/* ---------------------------------------- */
+/*          Practical Informations          */
+/* ---------------------------------------- */
+
+.practical-information-trip {
+  margin: 20px 0;
+  padding: 40px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  background-color: var(--second-color-main);
+}
+
+.practical-information-trip article {
+  margin: 0 40px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.practical-information-trip article a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--second-color-main);
+}
+.practical-information-trip article a:hover {
+  color: var(--hover-color-main);
+  border-bottom-color: var(--hover-color-main);
+  font-weight: 700;
+}
+.practical-information-trip article a:hover i {
+  color: var(--hover-color-main);
+  transform: scaleX(1.1);
+  translate: 10px;
+  transition: 0.5s;
+  font-weight: 700;
+}
+
+.practical-logo img {
+  margin-right: 20px;
+}
+/* ---------------------------------------- */
+/*                About trip                */
+/* ---------------------------------------- */
+
+.about-trip {
+  margin: 20px 0;
+  padding: 120px 0;
+  display: flex;
+  justify-content: flex-start;
+  background-image: url(../Images/Japon/Japon-Intro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-trip article {
+  margin: 40px 30px;
+  padding: 0 50px 30px 50px;
+  width: 575px;
+  background-color: var(--second-color-main);
+  border-radius: 5px;
+  text-align: justify;
+}
+
+/* ---------------------------------------- */
+/*       Section description-trip           */
+/* ---------------------------------------- */
+
+.description-trip {
+  margin: 20px 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  background-color: var(--second-color-main);
+}
+
+.description-trip article {
+  margin-right: 40px;
+  width: 600px;
+  text-align: justify;
+}
+
+.description-trip img {
+  width: 525px;
+  border-radius: 5px;
+}
+
+/* ---------------------------------------- */
+/*       reverse description-trip           */
+/* ---------------------------------------- */
+
+.description-trip-reverse {
+  margin: 20px 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row-reverse wrap;
+  background-color: var(--second-color-main);
+}
+
+.description-trip-reverse article {
+  margin-left: 40px;
+  width: 600px;
+  text-align: justify;
+}
+
+.description-trip-reverse img {
+  width: 525px;
+  border-radius: 5px;
+}
+
+/* ---------------------------------------- */
+/*                When Travel               */
+/* ---------------------------------------- */
+
+.when-travel {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 2000px;
+  background-image: url(../Images/Japon/Japon-Food-bg.jpg);
+}
+.when-travel h1 {
+  align-self: center;
+  color: white;
+}
+.when-travel article h2 {
+  text-align: center;
+  align-self: center;
+  height: 90%;
+  padding: 10% 0;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  background-color: var(--hover-color-main);
+  color: var(--second-color-main);
+}
+.when-travel article {
+  margin: 0 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  background-color: var(--second-color-main);
+  transition: 0.6s;
+}
+.when-travel article p {
+  margin: 40px;
+}
+
+.when-travel .first h2{
+  font-size: 60px;
+}
+.when-travel .first:hover,
+.when-travel .third:hover {
+  transform: translateX(100px);
+  width: 70%;
+}
+.when-travel .second:hover {
+  transform: translateX(-100px);
+  width: 70%;
+}
+.when-travel .second {
+  align-self: flex-end;
+}
+.when-travel img {
+  width: 600px;
+  height: 500px;
+}
+
+/* ---------------------------------------- */
+/*              Section Blog                */
+/* ---------------------------------------- */
+
+.blog-us {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  background-color: var(--second-color-main);
+  padding-bottom: 40px;
+}
+
+.blog-us-tab {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.blog-us-tab article {
+  margin: 0 15px;
+  width: 600px;
+  text-align: center;
+}
+
+.blog-us-tab img {
+  margin-bottom: 10px;
+  width: 400px;
+}
+
+.blog-us-tab article:hover {
+  box-shadow: 0px 0px 50px rgba(100, 100, 100, 0.6);
+  transition: 0.5s;
+}
+
+.scroll_up {
+  margin: 0 40px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+.scroll_up a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--second-color-main);
+  border-bottom: 2px solid var(--hover-color-main);
+}
+.scroll_up a:hover {
+  color: var(--hover-color-main);
+  border-top-color: var(--hover-color-main);
+  font-weight: 700;
+}
+.scroll_up a:hover i {
+  color: var(--hover-color-main);
+  transform: scaleX(1.1);
+  translate: 10px;
+  transition: 0.5s;
+  font-weight: 700;
+}
