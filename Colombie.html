@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/70536c59f8.js" crossorigin="anonymous"></script>
+    <link href="CSS/voyages.css" rel="stylesheet">
+    <link href="CSS/colombie.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/289fbec248.js" crossorigin="anonymous"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <title>Colombia</title>
+    <link rel="icon" href="Images/Colombie/icon.png">
+</head>
+
+<!-- NAVBAR -->
+<header>
+    <a class="nav-btn">
+        <span class="fas fa-align-justify fa-2xl"></span>
+      </a>
+      <nav class="sidebar">
+        <p>Navigation</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#" class="country-btn">Pays
+            <span class="fas fa-angle-down"></span>
+          </a>
+            <ul class="country-show">
+              <li><a href="#">Korée</a></li>
+              <li><a href="#">Canada</a></li>
+              <li><a href="#">Colombie</a></li>
+              <li><a href="#">Finlande</a></li>
+              <li><a href="#">Japon</a></li>
+            </ul>
+          </li>
+    
+          <li><a href="#"class="name-btn">Prénoms
+            <span class="fas fa-angle-down"></span>
+          </a>
+            <ul class="name-show">
+              <li><a href="#">Clément Marin</a></li>
+              <li><a href="#">Yoann Fermaud</a></li>
+              <li><a href="#">Elie Aigon</a></li>
+              <li><a href="#">Aurore Thomas</a></li>
+              <li><a href="#">Clément Ramos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    
+      <script>
+        $('.country-btn').click(function(){
+          $('nav ul .country-show').toggleClass("show");
+        });
+        $('.name-btn').click(function(){
+          $('nav ul .name-show').toggleClass("show");
+        });
+    
+        $('.nav-btn').click(function(){
+          $('.sidebar').toggleClass("show");
+          $('.nav-btn').toggleClass("show");
+        });
+      </script>
+</header>
+<body>
+  <section class="clip-path-title">
+  </section>
+  <section class="clip-path-background">
+    <h1>Colombie<br/>Plata o Plomo</h1>
+  </section>
+
+<!-- SECTION PRACTICAL -->
+
+<section class="practical-information-trip">
+  <div class="earth-plan">
+      <img src="/Images/Colombie/carte.png" alt="carte">
+  </div>
+  <article>
+      <div class="practical-logo">
+          <img src="/Images/Colombie/sub-cat-plane.svg" alt="">
+          <img src="/Images/Colombie/sub-cat-ferry.svg" alt="">
+          <img src="/Images/Colombie/sub-cat-train.svg" alt="">
+          <img src="/Images/Colombie/sub-cat-bus.svg" alt="">
+          <img src="/Images/Colombie/sub-cat-car.svg" alt="">
+      </div>
+      <h2>Guide</h2>
+      <p>La Colombie est très vaste, je vous conseille de bien organiser votre séjour pour ne pas manquer de temps.</p>
+      <a href="#decouverte">
+          <p>Découverte</p>
+          <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <a href="#recommandations">
+          <p>Mes recommandations</p>
+          <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <a href="#culinaire">
+          <p>Spécialités culinaires</p>
+          <i class="fa-solid fa-arrow-right"></i>
+      </a>
+  </article>
+</section>
+
+<!-- DESSCRIPTION -->
+
+<section class="description-trip" id="decouverte">
+  <article>
+    <h1 id="color-white">Découverte</h1>
+    <p>"Des canyons désertiques de la Tatacoa aux cimes enneigées del Cocuy en passant par la forêt amazonienne et les plages paradisiaques caribéennes, la Colombie ne cesse de surprendre par la diversité de ses paysages. Mieux encore, ce pays possède des écosystèmes uniques dans le monde comme le paramo. Des décors où vous pourrez débusquer des animaux fascinants (baleines à bosse, dauphins roses, oiseaux,…) et vous essayer aux sports à sensations (rafting, parapente, canyoning…). Assurément, voyager en Colombie c’est avoir l’impression de découvrir plusieurs pays en un seul. </p>
+  </article>
+  
+
+</section>
+
+<!-- SECTION BLOG -->
+
+  <section id="recommandations" class="spots">
+    <h1>Mes recommandations</h1>
+    <div class="spots-tab">
+        <article>
+            <a href="#">
+                <img src="/Images/Colombie/nuqui" alt="">
+                <h4>Nùqui</h4>
+                <p>De très belles plages, des gens accueillants, l'endroit parfait pour le surf.</p>
+            </a>
+        </article>
+        <article>
+            <a href="#">
+                <img src="/Images/Colombie/penon.jpg" alt="">
+                <h4>Peñón de Guatapé</h4>
+                <p>Un monolithe gigantesque avec une vue panoramique sans pareil.</p>
+            </a>
+        </article>
+    </div>
+    <div class="spots-tab">
+        <article>
+            <a href="#">
+                <img src="/Images/Colombie/cocora.jpg" alt="blog voyage de ...">
+                <h4>Vallée de Cocora</h4>
+                <p>Et la maison des colibris fait office de récompenses après une petite randonnée.</p>
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="/Images/Colombie/santa-marta.jpg" alt="blog voyage de ...">
+                <h4>La côte Caraïbe: Santa Marta et Carthagène</h4>
+                <p>Des plages sortant tous droits de nos rèves et des villes magnifiques. </p>
+            </a>
+        </article>
+    </div>
+</section>
+
+<!-- CAROUSEL  -->
+
+<div id="culinaire" class="card">
+  <h1><span>Spécialités culinaires</span></h1>
+  <div class="products">
+    <div class="product active" product-id="1">
+      <div class="thumbnail"><img src="/Images/Colombie/bandeja.jpeg"/></div>
+      <div class="product-description">
+        <h2 class="title">La Bandeja Paisa</h2>
+        <p class="description">Le plat universel colombien! On en trouve partout et c'est une valeur sùre!</p>
+      </div>
+    </div>
+    <div class="product" product-id="2">
+      <div class="thumbnail"><img src="Images/Colombie/cafe.jpg"/></div>
+      <div class="product-description">
+        <h2 class="title">Le mithyque café colombien</h2>
+        <p class="description">Second producteur de café mondial, le café colombien est réputé et excellent pour l'avoir gouté.</p>
+      </div>
+    </div>
+    <div class="product" product-id="3">
+      <div class="thumbnail"><img src="Images/Colombie/empanadas.jpg"/></div>
+      <div class="product-description">
+        <h2 class="title">Les Empanadas</h2>
+        <p class="description">Ce sont des espèces de fourrés frits à la viande généralement accompagnés d'une sauce hogao (assez épicé). Ils sont vendus dans la rue un peu partout.</p>
+      </div>
+    </div>
+    <div class="product" product-id="4">
+      <div class="thumbnail"><img src="Images/Colombie/patacon.jpeg"/></div>
+      <div class="product-description">
+        <h2 class="title">Le Patacon</h2>
+        <p class="description">De la banane écrasée et frie. Ca peut être surprenant, mais c'est vraiment excellent et peut être servie avec de la viande, de la sauce ou encore du fromage.</p>
+      </div>
+    </div>
+    <div class="product" product-id="5">
+      <div class="thumbnail"><img src="Images/Colombie/rhum.jpeg"/></div>
+      <div class="product-description">
+        <h2 class="title">Le Rhum</h2>
+        <p class="description">Le fameux rhum colombien, ambré, fruité, généralement boisé due à la consevation en fût.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><a class="btn" id="prev" href="#"  ripple-color="#666666">Prev</a><a class="btn" id="next" href="#" ripple="" ripple-color="#666666">Next</a></div>
+</div>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="/JS/colombie.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+/* ---------------------------------------- */
+/*      Barre de Navigation Couleurs        */
+/* ---------------------------------------- */
+
+/*
+  LIGNES A METTRE DANS LE HEADER
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/289fbec248.js" crossorigin="anonymous"></script>
+*/
+
+/* Vous pouvez définir ici la couleur de votre nav-bar la troisième couleur est celle du hover*/
+:root {
+  --first-color-nav: #aa2b2b;
+  --second-color-nav: #1b1b1b;
+  --hover-color-nav: #1e1e1e;
+  --text-color-nav: #e6e6e6;
+}
+
+.nav-btn {
+  color: var(--first-color-nav);
+}
+
+.sidebar {
+  background: var(--second-color-nav);
+}
+
+.sidebar p {
+  color: var(--text-color-nav);
+  background: var(--hover-color-nav);
+}
+
+nav ul {
+  background: var(--second-color-nav);
+}
+
+nav ul li a {
+  color: var(--text-color-nav);
+}
+
+nav ul li a:hover {
+  color: var(--first-color-nav);
+  background: var(--hover-color-nav);
+  border-bottom-color: var(--first-color-nav);
+}
+nav ul ul li a {
+  color: var(--text-color-nav);
+}
+
+/* SHARED */
+body {
+  background:  #f7c700;
+  font-size: 14px;
+  line-height: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: 0.5s ease;
+
+}
+
+h1 {
+  margin: 40px 0;
+  font-size: 42px;
+}
+
+h2 {
+  margin: 20px 0;
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+p {
+  margin: 15px 0;
+}
+/* CLIP-PATH */
+.clip-path-title {
+  padding: 400px 32px;
+  background-image: url("/Images/Colombie/bogota.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-color: white;
+}
+
+.clip-path-background {
+  display: flex;
+  padding-left: 10px;
+  height: 800px;
+  margin-top: -800px;
+  background-color: white;
+  animation: show-banner 6s infinite ease-in-out;
+}
+
+@keyframes show-banner{
+  0%{
+      -webkit-clip-path: circle(0.0% at 0 0);
+      clip-path: circle(0.0% at 0 0);
+  }
+  40%{
+    -webkit-clip-path: circle(16.9% at 0 7%);
+    clip-path: circle(16.9% at 0 7%);
+    
+    
+  }
+  60%{
+    -webkit-clip-path: circle(16.9% at 0 7%);
+    clip-path: circle(16.9% at 0 7%);
+    
+    
+  }
+  100%{
+      -webkit-clip-path: circle(0.0% at 0 0);
+      clip-path: circle(0.0% at 0 0);
+  }
+}
+
+/* SECTION PRATICAL */
+
+.practical-information-trip {
+  margin-top: 20px;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  background-color: #fff;
+}
+
+.practical-information-trip article{
+  margin: 0 40px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.practical-information-trip article a{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #000;
+}
+
+.practical-information-trip article a:hover i {
+  transform: scaleX(1.1);
+  translate: 10px;
+  transition: .5s;
+}
+
+.earth-plan img {
+  padding-right: 150px;
+  width: 300px;
+}
+
+.practical-logo img {
+  margin-right: 20px;
+} 
+
+/* DESCRIPTION */
+
+.description-trip {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url(/Images/Colombie/amazon.jpeg);
+  
+  background-size: cover;
+  background-position: center center;
+}
+
+.description-trip article {
+  backdrop-filter: blur(8px);
+  padding: 10px;
+  color: #e6e6e6;
+  margin-left: 100px;
+  width: 500px; 
+  text-align: center;
+}
+
+#color-white{
+  color: white;
+}
+
+/* SECTION BLOG */
+.spots {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  background-color: #fff;
+}
+
+.spots-tab {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.spots-tab article {
+  margin: 0 15px;
+  padding-bottom: 10px;
+  width: 400px;
+  height: fit-content;
+  text-align: center;
+}
+
+.spots-tab img {
+  margin-bottom: 10px;
+  width: 400px;
+}
+
+.spots-tab article:hover {
+  box-shadow: 0px 0px 50px rgba(100, 100, 100, .6);
+  transition: .5s;
+}
+
+/* CAROUSEL */
+
+
+
+.btn {
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin: 10px;
+  background-color: #000;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+
+.card {
+  background: #FFFFFF;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  height: auto;
+  position: relative;
+  overflow: visible;
+  transition: 0.5s ease;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+}
+.product-description{
+  display: flex;
+  flex-direction: column;
+
+}
+.product.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.thumbnail {
+  width: 50%;
+  margin: 0 0 20px;
+}
+
+.thumbnail img{
+  width: 90%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 -12px -12px;
+}
+
+[ripple] {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+[ripple] .ripple {
+  position: absolute;
+  background: #FFFFFF;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  transform: scale(0);
+  -webkit-animation: ripple 2s;
+          animation: ripple 2s;
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(20);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(20);
+    opacity: 0;
+  }
+}
