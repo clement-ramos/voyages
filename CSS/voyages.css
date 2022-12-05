@@ -8,6 +8,9 @@ body {
   font-size: 1.2em;
   color: black;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* ---------------------------------------- */
 /*                    FONT                  */
@@ -82,8 +85,10 @@ h6 {
   color: black;
 }
 
-.test {
-  margin: 30px;
+p {
+  font-family: 'Raleway';
+  margin: 15px;
+  font-size: 1em;
 }
 
 /* ---------------------------------------- */
@@ -139,6 +144,7 @@ a {
 
 .nav-btn {
   text-decoration: none;
+  z-index: 100;
 }
 
 .sidebar {

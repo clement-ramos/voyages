@@ -24,7 +24,6 @@
 .sidebar p {
     color: var(--text-color-nav);
     background: var(--hover-color-nav);
-    font-family: Voyage;
 }
   
 nav ul {
@@ -33,7 +32,6 @@ nav ul {
   
 nav ul li a {
     color: var(--text-color-nav);
-    font-family: Voyage;
 }
   
 nav ul li a:hover {
@@ -174,7 +172,7 @@ nav ul ul li a {
 }
 
 .places-to-see-grid-pictures {
-    width: 40%;
+    width: 60%;
     margin-left: 40px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
