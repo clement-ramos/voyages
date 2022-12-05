@@ -135,10 +135,10 @@ nav ul li a:hover span {
 }
 
 
-.clip-path-background-second{
+.clip-path-background{
   margin-top: -40px;
   height: 800px;
-  background-image: url("../Images/Japon/Colombie.jpg");
+  background-image: url("../Images/Japon/Coree.jpg");
   background-size: cover;
   background-position: center center;
   position: absolute;
@@ -221,7 +221,7 @@ nav ul li a:hover span {
   padding: 40px 0;
   display: flex;
   justify-content: flex-start;
-  background-image: url(../Images/Japon/Japon2.jpg);
+  background-image: url(../Images/Corée/Korea-Banner.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -242,15 +242,21 @@ nav ul li a:hover span {
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  background-color: red;
+  background-image:url(../Images/Corée/Korea-Banner-2.jpeg) ;
+  background-size: cover;
   height: 800px;
   padding-bottom: 80px;
+  color: whitesmoke;
+
 }
 .to-do h1{
   align-self: center;
+  color: whitesmoke;
 }
 .to-do h2{
   align-self: center;
+  margin: 20px;
+  color: whitesmoke;
 }
 
 .to-do section{
@@ -268,8 +274,8 @@ nav ul li a:hover span {
   flex-direction: column;
   overflow: hidden;
   height: 100px;
-  width: 40%;
-  background-color: wheat;
+  width: 20%;
+  backdrop-filter: blur(10px);
   transition: .4s;
 
 }
@@ -283,27 +289,24 @@ nav ul li a:hover span {
   justify-content: space-between;
   padding: 40px;
 }
-.to-do-content p{
-  margin: 80px;
-}
 
 
 
 .to-do-first:hover{
-  width: 100%;
+  width: 80%;
   height: 100%;
 
 }
 
 
 .to-do-second:hover{
-  width: 100%;
+  width: 80%;
   height: 100%;
 
 }
 
 .to-do-third:hover{
-  width: 100%;
+  width: 80%;
   height: 100%;
 
 }
