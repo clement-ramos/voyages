@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/Coree.css" />
     <link rel="stylesheet" href="CSS/voyages.css" />
+    <link rel="stylesheet" href="CSS/Coree.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script
       src="https://kit.fontawesome.com/289fbec248.js"
@@ -14,7 +14,6 @@
     <title>Voyagez en Corée</title>
   </head>
   <body>
-
     <a class="nav-btn">
       <span class="fas fa-align-justify fa-2xl" onclick="nav_out()"></span>
     </a>
@@ -27,7 +26,7 @@
         <li><a href="index.html">Home</a></li>
 
         <li>
-          <a href="#" class="country-btn">
+          <a class="country-btn">
             Pays
             <span class="fas fa-angle-down"></span>
           </a>
@@ -55,13 +54,13 @@
         </li>
       </ul>
     </nav>
+
     <!-- ######################################################## -->
     <main>
       <section class="clip-path">
-        
-          <h1>La Corée</h1>
-        
-        <section class="clip-path-background-second"></section>
+        <h1>La Corée</h1>
+
+        <section class="clip-path-background"></section>
       </section>
       <!-- ######################################################## -->
 
@@ -78,11 +77,11 @@
             <p>Introduction</p>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
-          <a href="#best-to-visit">
+          <a href="#best-to-do">
             <p>Les incontournables</p>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
-          <a href="#unmissable">
+          <a href="#best-to-visit">
             <p>Les repas Typiques</p>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -148,6 +147,64 @@
 
       <!-- ######################################################## -->
 
+      <section class="to-do" id="best-to-do">
+        <h1>Lieu à ne pas rater !</h1>
+        <section>
+          <article class="to-do-first">
+            <h2>Busan</h2>
+
+            <div class="to-do-content">
+              <img src="Images/Corée/Busan.jpeg" alt="" />
+              <p>
+                Difficile de visiter la Corée du Sud en faisant l’impasse sur
+                Busan, la deuxième plus grande ville et port important. Si la
+                ville n’est pas globalement attractive, elle a au moins deux
+                lieux qui méritent le détour : Gamcheon, le village culturel,
+                aux ruelles étroites, qui sinuent parmi des maisons aux vives
+                couleurs. La construction de ce quartier date des années 1950 et
+                tout a été pensé pour que chaque maison jouisse d’une vue
+                dégagée. L’art de rue y est très présent, avec notamment une
+                statue du Petit Prince qui contemple la ville.
+              </p>
+            </div>
+          </article>
+          <article class="to-do-second">
+            <h2>Jeonju</h2>
+            <div class="to-do-content">
+              <p>
+                À 200 km au sud-ouest de la capitale, Jeonju est une étape
+                incontournable. Prévoyez un hébergement traditionnel (hanok)
+                dans la vieille ville, vous vous sentirez transporté·e dans le
+                temps. Votre couchage sera constitué du traditionnel futon, posé
+                à même le sol. Vous aurez peut-être besoin d’explications pour
+                pouvoir installer celui-ci convenablement, car vous le trouverez
+                plié, de façon à libérer l’espace. Ce sera l’occasion d’un
+                agréable moment de partage avec votre hôte.
+              </p>
+              <img src="Images/Corée/Jeonju.jpeg" alt="" />
+            </div>
+          </article>
+          <article class="to-do-third">
+            <h2>Jeju</h2>
+            <div class="to-do-content">
+              <img src="Images/Corée/Jeju.jpeg" alt="" />
+              <p>
+                Destination paradisiaque figurant parmi les incontournables des
+                lieux à visiter en Corée du Sud, l’île de Jeju se situe à 85 km
+                au sud de la péninsule. Formée par plusieurs éruptions
+                volcaniques, elle offre des paysages de toute beauté, de
+                nombreuses opportunités de randonnée et les bienfaits d’un
+                climat subtropical. Toutefois, en gravissant le mont Hallasan,
+                qui culmine à 1950 m, vous pourrez aussi être confronté à un
+                climat subantarctique !
+              </p>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <!-- ######################################################## -->
+
       <section class="when-travel" id="best-to-visit">
         <h1>TEst oui oui</h1>
         <article class="first">
@@ -185,44 +242,13 @@
 
       <!-- ######################################################## -->
 
-      <section class="to-do" id="unmissable">
-        <h1>Lieu à ne pas rater !</h1>
-        <section>
-            <article class="to-do-first">
-                <h2>Lieu 1</h2>
-  
-                <div class="to-do-content">
-                    <img src="Images/Japon/Japon1.jpg" alt="">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti voluptates perferendis eveniet voluptas commodi debitis consequatur aperiam alias voluptatibus, rerum nostrum officia libero obcaecati, maiores, officiis quibusdam! Unde, possimus vel.</p>
-                </div>
-            </article>
-            <article class="to-do-second">
-                <h2>Lieu 1</h2>
-                <div class="to-do-content">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti voluptates perferendis eveniet voluptas commodi debitis consequatur aperiam alias voluptatibus, rerum nostrum officia libero obcaecati, maiores, officiis quibusdam! Unde, possimus vel.</p>
-                    <img src="Images/Japon/Japon1.jpg" alt="">
-                  </div>
-            </article>
-            <article class="to-do-third">
-                <h2>Lieu 1</h2>
-                <div class="to-do-content">
-                    <img src="Images/Japon/Japon1.jpg" alt="">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti voluptates perferendis eveniet voluptas commodi debitis consequatur aperiam alias voluptatibus, rerum nostrum officia libero obcaecati, maiores, officiis quibusdam! Unde, possimus vel.</p>
-                </div>
-            </article>
-        </section>
-        
-      </section>
-
-      <!-- ######################################################## -->
-
       <section class="blog-us" id="blog">
         <h1>Découvrir nos autres voyages ...</h1>
         <div class="blog-us-tab">
           <article>
             <a href="Canada.html">
               <img src="Images/Japon/Canada.jpg" alt="Explorez le Canada !" />
-              <h4>Explorez le Canada </h4>
+              <h4>Explorez le Canada</h4>
               <p>18 décembre 2018 - Canada</p>
             </a>
           </article>
@@ -276,7 +302,6 @@
       $(".nav-btn").click(function () {
         $(".sidebar").toggleClass("show");
         $(".nav-btn").toggleClass("show");
-        
       });
 
       $(".hide-btn").click(function () {
