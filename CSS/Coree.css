@@ -319,8 +319,9 @@ nav ul li a:hover span {
   justify-content: space-evenly;
   width: 100%;
   height: 1700px;
-  background-image: url(../Images/Japon/Finlande.jpg);
-  
+  background-image: url(../Images/Japon/Japon-Food-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .when-travel h1{
   align-self: center;
